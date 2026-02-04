@@ -159,7 +159,7 @@
   }
 
   ::selection {
-    background: hsl(var(--accent) / 0.75);
+    background: hsl(var(--accent) / 2);
   }
 }
 
