@@ -220,7 +220,7 @@ export default function Landing() {
                   "
                   data-testid="hero-title"
                 >
-                  Om Convessing Agency
+                  Om Convassing Agency
                 </h1>
 
                 <p
