@@ -82,13 +82,7 @@ export default async function handler(req: any, res: any) {
                   <!-- Header -->
                   <tr>
                     <td style="padding:20px 24px; background:linear-gradient(90deg,#0f172a,#0b1220); color:#fff;">
-                      <div style="display:flex; align-items:center; gap:12px;">
-                        <div style="background:#efefef11; padding:6px 10px; border-radius:999px; border:1px solid rgba(255,255,255,0.08); font-weight:700; font-size:13px;">
-                          Contact
-                        </div>
-                        <div style="font-size:14px; opacity:0.9;">New inquiry received</div>
-                      </div>
-                      <h2 style="margin:10px 0 0; font-size:20px; line-height:1.1;">Website contact submission</h2>
+                      <h2 style="margin:10px 0 0; font-size:20px; line-height:1.1;">New inquiry received</h2>
                     </td>
                   </tr>
 
@@ -137,19 +131,10 @@ export default async function handler(req: any, res: any) {
                               </tr>
                             </table>
 
-                            <div style="margin-top:14px; font-size:12px; color:#6b7280;">
-                              Reply-to is set to the sender's email so your reply goes directly to them.
-                            </div>
+                            
                           </td>
                         </tr>
                       </table>
-                    </td>
-                  </tr>
-
-                  <!-- Footer -->
-                  <tr>
-                    <td style="padding:16px 24px; background:#fbfdff; border-top:1px solid #eef2f7; font-size:12px; color:#6b7280;">
-                      This email was generated from your website contact form. If you believe this message is spam, please ignore.
                     </td>
                   </tr>
                 </table>
