@@ -13,10 +13,6 @@ function escapeHtml(str = "") {
     .replace(/'/g, "&#039;");
 }
 
-/**
- * Serverless handler - supports only POST.
- * Expects JSON body: { name, email, company?, phone?, message }
- */
 export default async function handler(req: any, res: any) {
   try {
     // Debug: show whether env vars exist in logs (helpful while testing)
@@ -80,12 +76,11 @@ export default async function handler(req: any, res: any) {
                 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#ffffff; border-radius:12px; overflow:hidden; border:1px solid #e6e9ef;">
                   <!-- Header -->
                   <tr>
-                    <td style="padding:22px 28px; background:#1acb5b; color:#ffffff;">
+                    <td style="padding:22px 28px; background:#17823f; color:#ffffff;">
                       <div style="display:flex; align-items:center; gap:12px; flex-wrap:wrap;">
                         <div style="background:rgba(255,255,255,0.08); padding:6px 12px; border-radius:999px; font-weight:700; font-size:14px;">
-                          Contact
+                          New inquiry received
                         </div>
-                        <div style="font-size:15px; opacity:0.95;">New inquiry received</div>
                       </div>
                       <h2 style="margin:10px 0 0; font-size:22px; line-height:1.15; font-weight:700;">Website contact submission</h2>
                     </td>
