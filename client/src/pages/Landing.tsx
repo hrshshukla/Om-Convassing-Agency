@@ -190,7 +190,7 @@ export default function Landing() {
   return (
     <div className="min-h-screen">
       <Seo
-        title="Om Convessing Agency — Trusted representation. Measurable growth."
+        title="Om Convassing Agency — Trusted representation. Measurable growth."
         description="A premium commission agent firm helping manufacturers and B2B providers grow pipeline and revenue through disciplined, relationship-led sales execution."
         canonicalPath="/"
       />
@@ -220,7 +220,7 @@ export default function Landing() {
                   "
                   data-testid="hero-title"
                 >
-                  Om Convassing Agency
+                  Om Convessing Agency
                 </h1>
 
                 <p
