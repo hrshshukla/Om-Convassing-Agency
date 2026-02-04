@@ -100,15 +100,6 @@ export default async function handler(req: any, res: any) {
                           <!-- Left column: contact info (static) -->
                           <td style="vertical-align:top; width:40%; padding-right:16px;">
                             <div style="font-size:13px; color:#6b7280; margin-bottom:8px;">Typical response: within 1 business day</div>
-
-                            <div style="margin-top:12px; border-radius:10px; padding:12px; background:#f8fafc; border:1px solid #eef2f7;">
-                              <div style="font-weight:700; margin-bottom:6px;">Contact details</div>
-                              <div style="font-size:13px; color:#374151;">
-                                <div style="margin-bottom:6px;"><strong>Email:</strong><br/><span style="color:#6b7280;">hello@yourfirm.com</span></div>
-                                <div style="margin-bottom:6px;"><strong>Phone:</strong><br/><span style="color:#6b7280;">+1 (000) 000-0000</span></div>
-                                <div><strong>Office:</strong><br/><span style="color:#6b7280;">123 Market Street, Suite 400<br/>Your City, Country</span></div>
-                              </div>
-                            </div>
                           </td>
 
                           <!-- Right column: submitted data -->
