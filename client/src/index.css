@@ -1,0 +1,255 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..900,0..100&family=Manrope:wght@300..800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ---------------------------------------------------------------------
+   Premium B2B Landing Theme
+   - Display: Fraunces (editorial, confident)
+   - Body: Manrope (technical, crisp)
+   - Palette: ink + porcelain + teal/copper accents
+------------------------------------------------------------------------ */
+
+:root {
+  --font-sans: "Manrope", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto,
+    Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  --font-display: "Fraunces", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+
+  /* Base */
+  --background: 140 20% 98%;
+  --foreground: 160 50% 5%;
+
+  /* Surfaces */
+  --card: 140 20% 99%;
+  --card-foreground: 160 50% 5%;
+  --popover: 140 20% 99%;
+  --popover-foreground: 160 50% 5%;
+
+  /* UI */
+  --border: 140 20% 90%;
+  --input: 140 20% 88%;
+  --ring: 142 76% 36%;
+
+  /* Brand */
+  --primary: 142 76% 36%;
+  --primary-foreground: 140 20% 98%;
+
+  --secondary: 140 20% 94%;
+  --secondary-foreground: 160 50% 15%;
+
+  --muted: 140 15% 92%;
+  --muted-foreground: 160 20% 40%;
+
+  --accent: 142 70% 94%;
+  --accent-foreground: 142 76% 20%;
+
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 210 40% 98%;
+
+  /* Charts (unused but required by existing theme map) */
+  --chart-1: 142 76% 36%;
+  --chart-2: 160 60% 45%;
+  --chart-3: 175 60% 35%;
+  --chart-4: 140 40% 55%;
+  --chart-5: 155 50% 25%;
+
+  /* Sidebar vars (unused here but required by existing theme map) */
+  --sidebar: 140 25% 97%;
+  --sidebar-foreground: 160 50% 10%;
+  --sidebar-border: 140 20% 90%;
+  --sidebar-primary: 142 76% 36%;
+  --sidebar-primary-foreground: 140 20% 98%;
+  --sidebar-accent: 142 70% 92%;
+  --sidebar-accent-foreground: 142 76% 20%;
+  --sidebar-ring: 142 76% 36%;
+
+  /* Elevation overlays used by existing utility system */
+  --button-outline: rgba(0, 0, 0, 0.1);
+  --badge-outline: rgba(0, 0, 0, 0.05);
+  --opaque-button-border-intensity: -8;
+  --elevate-1: rgba(0, 0, 0, 0.03);
+  --elevate-2: rgba(0, 0, 0, 0.08);
+
+  --radius: 0.9rem;
+
+  /* Subtle, modern shadows */
+  --shadow-soft: 0 14px 45px -22px hsl(222 47% 11% / 0.22);
+  --shadow-lift: 0 18px 55px -26px hsl(222 47% 11% / 0.28);
+  --shadow-ring: 0 0 0 1px hsl(var(--border) / 1);
+
+  color-scheme: light;
+}
+
+.dark {
+  --background: 160 30% 6%;
+  --foreground: 140 20% 98%;
+
+  --card: 160 30% 8%;
+  --card-foreground: 140 20% 98%;
+  --popover: 160 30% 8%;
+  --popover-foreground: 140 20% 98%;
+
+  --border: 160 20% 15%;
+  --input: 160 20% 18%;
+  --ring: 142 76% 45%;
+
+  --primary: 142 76% 45%;
+  --primary-foreground: 160 30% 6%;
+
+  --secondary: 160 20% 12%;
+  --secondary-foreground: 140 20% 98%;
+
+  --muted: 160 20% 12%;
+  --muted-foreground: 160 10% 70%;
+
+  --accent: 142 60% 25%;
+  --accent-foreground: 140 20% 98%;
+
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 210 40% 98%;
+
+  --chart-1: 142 76% 45%;
+  --chart-2: 160 60% 55%;
+  --chart-3: 175 60% 45%;
+  --chart-4: 140 40% 65%;
+  --chart-5: 155 50% 35%;
+
+  --sidebar: 160 30% 8%;
+  --sidebar-foreground: 140 20% 98%;
+  --sidebar-border: 160 20% 15%;
+  --sidebar-primary: 142 76% 45%;
+  --sidebar-primary-foreground: 160 30% 6%;
+  --sidebar-accent: 160 20% 12%;
+  --sidebar-accent-foreground: 140 20% 98%;
+  --sidebar-ring: 142 76% 45%;
+
+  --button-outline: rgba(255, 255, 255, 0.12);
+  --badge-outline: rgba(255, 255, 255, 0.06);
+  --opaque-button-border-intensity: 9;
+  --elevate-1: rgba(255, 255, 255, 0.05);
+  --elevate-2: rgba(255, 255, 255, 0.1);
+
+  color-scheme: dark;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-sans);
+    text-rendering: geometricPrecision;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-display);
+    @apply font-bold tracking-tight;
+  }
+
+  ::selection {
+    background: hsl(var(--accent) / 0.25);
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display);
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .container-pad {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .glass {
+    background: linear-gradient(
+      180deg,
+      hsl(var(--card) / 0.78),
+      hsl(var(--card) / 0.58)
+    );
+    border: 1px solid hsl(var(--border) / 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: var(--shadow-ring), 0 18px 60px -34px hsl(222 47% 11% / 0.30);
+  }
+
+  .hero-mesh {
+    background:
+      radial-gradient(1100px 600px at 20% -10%, hsl(var(--accent) / 0.22), transparent 60%),
+      radial-gradient(900px 520px at 90% 10%, hsl(var(--primary) / 0.22), transparent 62%),
+      radial-gradient(700px 440px at 60% 90%, hsl(224 76% 56% / 0.16), transparent 60%),
+      linear-gradient(180deg, hsl(var(--background)), hsl(var(--background)));
+  }
+
+  .grain::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.08;
+    mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='.6'/%3E%3C/svg%3E");
+    background-size: 220px 220px;
+  }
+
+  .ring-focus {
+    @apply focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-ring/20 focus-visible:border-ring;
+  }
+
+  .soft-border {
+    border: 1px solid hsl(var(--border) / 0.65);
+  }
+
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+
+  .shadow-lift {
+    box-shadow: var(--shadow-lift);
+  }
+
+  .animate-in-up {
+    animation: inUp 700ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+  }
+
+  .animate-fade {
+    animation: fade 650ms ease both;
+  }
+
+  @keyframes inUp {
+    from {
+      opacity: 0;
+      transform: translateY(14px);
+      filter: blur(6px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0px);
+      filter: blur(0px);
+    }
+  }
+
+  @keyframes fade {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
