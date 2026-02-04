@@ -58,7 +58,7 @@ export default async function handler(req: any, res: any) {
       },
     });
 
-    const subject = `Website inquiry from ${String(name)}${company ? ` — ${company}` : ""}`;
+    const subject = `New Inquiry Received ${String(name)}${company ? ` — ${company}` : ""}`;
 
     // HTML: single-column, wider, larger text, header color #1acb5b
     const html = `
@@ -76,13 +76,13 @@ export default async function handler(req: any, res: any) {
                 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#ffffff; border-radius:12px; overflow:hidden; border:1px solid #e6e9ef;">
                   <!-- Header -->
                   <tr>
-                    <td style="padding:22px 28px; background:#17823f; color:#ffffff;">
+                    <td style="padding:22px 28px; background:linear-gradient(90deg,#0f371f,#0b2114); color:#ffffff;">
                       <div style="display:flex; align-items:center; gap:12px; flex-wrap:wrap;">
                         <div style="background:rgba(255,255,255,0.08); padding:6px 12px; border-radius:999px; font-weight:700; font-size:14px;">
                           New inquiry received
                         </div>
                       </div>
-                      <h2 style="margin:10px 0 0; font-size:22px; line-height:1.15; font-weight:700;">Website contact submission</h2>
+                      <h2 style="margin:10px 0 0; font-size:22px; line-height:1.15; font-weight:700;">Om Convessing Agency</h2>
                     </td>
                   </tr>
 
@@ -158,7 +158,7 @@ ${message}
 
     // Send email
     await transporter.sendMail({
-      from: `"Website Contact" <${GMAIL_USER}>`,
+      from: `"Om Convessing Agency " <${GMAIL_USER}>`,
       to: RECEIVER_EMAIL,
       replyTo: email,
       subject,
