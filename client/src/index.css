@@ -10,10 +10,12 @@
    - Body: Manrope (technical, crisp)
    - Palette: ink + porcelain + teal/copper accents
 ------------------------------------------------------------------------ */
+*::-webkit-scrollbar {
+  cursor: pointer;
+}
+
 * {
-                /*     thumb       track */
   scrollbar-color: #055124 transparent;
-  ;
 }
 
 :root {
