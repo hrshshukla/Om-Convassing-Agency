@@ -147,14 +147,14 @@ export function ContactForm({ "data-testid": testId }: { "data-testid"?: string 
                 <Mail className="mt-0.5 h-4.5 w-4.5 text-primary" />
                 <div>
                   <div className="font-semibold" data-testid="contact-email-label">Email</div>
-                  <div className="text-muted-foreground" data-testid="contact-email-value">hello@yourfirm.com</div>
+                  <div className="text-muted-foreground" data-testid="contact-email-value">omconvassingagency@gmail.com</div>
                 </div>
               </div>
               <div className="flex items-start gap-3 rounded-2xl border border-border/60 bg-secondary/35 p-4">
                 <Phone className="mt-0.5 h-4.5 w-4.5 text-primary" />
                 <div>
                   <div className="font-semibold" data-testid="contact-phone-label">Phone</div>
-                  <div className="text-muted-foreground" data-testid="contact-phone-value">+1 (000) 000-0000</div>
+                  <div className="text-muted-foreground" data-testid="contact-phone-value">+91- 8269666320</div>
                 </div>
               </div>
               <div className="flex items-start gap-3 rounded-2xl border border-border/60 bg-secondary/35 p-4">
@@ -162,7 +162,7 @@ export function ContactForm({ "data-testid": testId }: { "data-testid"?: string 
                 <div>
                   <div className="font-semibold" data-testid="contact-address-label">Office</div>
                   <div className="text-muted-foreground" data-testid="contact-address-value">
-                    123 Market Street, Suite 400<br />Your City, Country
+                    T.T Nagar, Infront of Shivpuram Colony<br />Satna Madhya Pradesh (485001), India
                   </div>
                 </div>
               </div>

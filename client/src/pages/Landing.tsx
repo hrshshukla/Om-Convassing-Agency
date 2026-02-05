@@ -25,28 +25,28 @@ import {
 const SERVICES = [
   {
     icon: <Target className="h-5 w-5" />,
-    title: "Territory growth strategy",
+    title: "41-Year's of Legacy",
     description:
-      "Define territories, target accounts, and revenue goals — built for long sales cycles and repeat buyers.",
+      "We're known to Satisfactorily cater to the demands of it's Customer base.",
     id: "svc-1",
   },
   {
     icon: <Handshake className="h-5 w-5" />,
-    title: "Relationship-led selling",
+    title: "Network-Driven Market Penetration",
     description:
-      "We build trust with buyers, distributors, and contractors — turning introductions into durable revenue.",
+      "Our pan-India agent network gives us unparalleled reach and local market intelligence across diverse geographies, enabling rapid market penetration and customer acquisition.",
     id: "svc-2",
   },
   {
     icon: <LineChart className="h-5 w-5" />,
-    title: "Pipeline + forecasting",
+    title: "Senior-Level Selling",
     description:
       "A disciplined process with clear stages, probability weighting, and deal notes you can act on.",
     id: "svc-3",
   },
   {
     icon: <BarChart3 className="h-5 w-5" />,
-    title: "Market intelligence",
+    title: "Market intelligence & Aligned Incentives",
     description:
       "We capture competitor pricing, channel feedback, and product positioning — so you never sell blind.",
     id: "svc-4",
@@ -210,7 +210,7 @@ export default function Landing() {
                   "
                   data-testid="hero-badge"
                 >
-                  Commission agents for B2B growth
+                  41-Year's of Legacy.
                 </Badge>
 
                 <h1
@@ -220,7 +220,7 @@ export default function Landing() {
                   "
                   data-testid="hero-title"
                 >
-                  Om Convessing Agency
+                  Om Canvassing Agency
                 </h1>
 
                 <p
@@ -230,8 +230,7 @@ export default function Landing() {
                   "
                   data-testid="hero-subtitle"
                 >
-                  Representing manufacturers and B2B providers with a sales system built on
-                  credibility, consistent execution, and transparent reporting — led by Ravi Gupta
+                  Trusted Broker & Commission Agent Connecting Buyers & Sellers | Consistent Execution, Transparent Reporting | Satna's Most Reliable Partner in Grain & Cattle Feed Trading— led by Ravi Gupta
                   and B.L. Gupta in Satna, Madhya Pradesh.
                 </p>
 
@@ -249,7 +248,7 @@ export default function Landing() {
                     data-testid="hero-cta-primary"
                   >
                     <a href="#contact">
-                      Request a callback
+                      Contact Us -
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </a>
                   </Button>
@@ -790,6 +789,16 @@ export default function Landing() {
               </div>
               <div className="text-muted-foreground">8269666320 (Ravi Gupta)</div>
               <div className="text-muted-foreground">9303320625 (B.L. Gupta)</div>
+
+              <div className="text-xs font-semibold tracking-[0.18em] uppercase text-muted-foreground"> 
+                Telephone
+                 </div>
+                <div className="text-muted-foreground">07672-411502</div>
+              <div className="text-muted-foreground">07672-406963</div>
+             
+              <div className="text-xs font-semibold tracking-[0.18em] uppercase text-muted-foreground"> 
+                Address
+                 </div>
               <div className="text-muted-foreground">T.T Nagar, Infront of Shivpuram Colony, Satna Madhya Pradesh (485001)</div>
             </div>
 
@@ -813,7 +822,7 @@ export default function Landing() {
                   "
                   data-testid="footer-cta"
                 >
-                  <a href="#contact">Request a callback</a>
+                  <a href="#contact">Contact Us</a>
                 </Button>
               </div>
             </div>
