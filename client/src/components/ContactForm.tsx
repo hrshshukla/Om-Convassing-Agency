@@ -1,3 +1,4 @@
+// client/src/components/ContactForm.tsx
 import { useMemo, useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { Button } from "@/components/ui/button";
@@ -59,16 +60,52 @@ export function ContactForm({ "data-testid": testId }: { "data-testid"?: string 
 
     setIsSubmitting(true);
     try {
-      // Simulate sending (in a real app, you'd send to a backend or email service)
-      await new Promise((resolve) => setTimeout(resolve, 1000));
+      // real send: POST to serverless endpoint
+      const payload = {
+        name: form.name.trim(),
+        email: form.email.trim(),
+        company: form.company.trim(),
+        phone: form.phone.trim(),
+        message: form.message.trim(),
+      };
 
-      toast({
-        title: "Inquiry received",
-        description: "Thanks for reaching out! We'll get back to you soon.",
+      const res = await fetch("/api/send-mail", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
       });
 
-      setForm({ name: "", email: "", company: "", phone: "", message: "" });
-      setFieldError({});
+      if (res.ok) {
+        toast({
+          title: "Inquiry received",
+          description: "Thanks for reaching out! We'll get back to you soon.",
+        });
+
+        setForm({ name: "", email: "", company: "", phone: "", message: "" });
+        setFieldError({});
+      } else {
+        // attempt to read error details from response
+        let json: any = {};
+        try {
+          json = await res.json();
+        } catch (err) {
+          /* ignore parse errors */
+        }
+
+        // If backend returns field-level errors, map them to UI
+        if (json?.fieldErrors && typeof json.fieldErrors === "object") {
+          setFieldError(json.fieldErrors);
+        }
+
+        const serverMessage = json?.error || json?.message || "Failed to send. Please try again later.";
+        toast({
+          title: "Couldn't send inquiry",
+          description: serverMessage,
+          variant: "destructive",
+        });
+      }
     } catch (err) {
       const message = err instanceof Error ? err.message : "Something went wrong.";
       toast({
@@ -76,6 +113,7 @@ export function ContactForm({ "data-testid": testId }: { "data-testid"?: string 
         description: message,
         variant: "destructive",
       });
+      console.error("ContactForm send error:", err);
     } finally {
       setIsSubmitting(false);
     }
