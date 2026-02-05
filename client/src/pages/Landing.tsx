@@ -25,28 +25,28 @@ import {
 const SERVICES = [
   {
     icon: <Target className="h-5 w-5" />,
-    title: "Territory growth strategy",
+    title: "41-Year's of Legacy",
     description:
-      "Define territories, target accounts, and revenue goals — built for long sales cycles and repeat buyers.",
+      "We're known to Satisfactorily cater to the demands of it's Customer base.",
     id: "svc-1",
   },
   {
     icon: <Handshake className="h-5 w-5" />,
-    title: "Relationship-led selling",
+    title: "Network-Driven Market Penetration",
     description:
-      "We build trust with buyers, distributors, and contractors — turning introductions into durable revenue.",
+      "Our pan-India agent network gives us unparalleled reach and local market intelligence across diverse geographies, enabling rapid market penetration and customer acquisition.",
     id: "svc-2",
   },
   {
     icon: <LineChart className="h-5 w-5" />,
-    title: "Pipeline + forecasting",
+    title: "Senior-Level Selling",
     description:
       "A disciplined process with clear stages, probability weighting, and deal notes you can act on.",
     id: "svc-3",
   },
   {
     icon: <BarChart3 className="h-5 w-5" />,
-    title: "Market intelligence",
+    title: "Market intelligence & Aligned Incentives",
     description:
       "We capture competitor pricing, channel feedback, and product positioning — so you never sell blind.",
     id: "svc-4",
@@ -68,10 +68,66 @@ const SERVICES = [
 ];
 
 const INDUSTRIES = [
-  { title: "Industrial supplies", note: "OEM, MRO, and engineered components", icon: <Factory className="h-5 w-5" />, id: "ind-1" },
-  { title: "Building materials", note: "Commercial & residential channels", icon: <Layers3 className="h-5 w-5" />, id: "ind-2" },
-  { title: "Manufacturing services", note: "Contract manufacturing & assembly", icon: <Sparkles className="h-5 w-5" />, id: "ind-3" },
-  { title: "B2B SaaS (select)", note: "Operations and procurement tools", icon: <BadgeCheck className="h-5 w-5" />, id: "ind-4" },
+  {
+    title: "Cereals",
+    note: "Primary grains and pulses",
+    image: "/industries/category_1.jpg",
+    items: [
+      "Green Millets",
+      "Chana Dal",
+      "Chickpeas",
+      "Wheat Flour",
+      "Desi Chana",
+      "Yellow Corn Maize",
+      "Wheat",
+      "Sorghum Seeds",
+      "1121 Basmati Rice",
+      "Sona Masoori Rice",
+      "RI-36 Rice",
+    ],
+    id: "ind-1",
+  },
+  {
+    title: "Oil Seeds",
+    note: "High-yield oil crops",
+    image: "/industries/category_2.jpg",
+    items: [
+      "Black Mustard",
+      "Yellow Soyabean",
+      "Yellow Mustard",
+      "Sunflower Seeds",
+    ],
+    id: "ind-2",
+  },
+  {
+    title: "Oil Seed Cakes",
+    note: "Premium extraction meals",
+    image: "/industries/category_3.jpg",
+    items: [
+      "Groundnut Oil Cake",
+      "Sunflower Oil Cake",
+      "Cottonseed Meal",
+      "Linseed Meal",
+      "Mustard Cake",
+      "Sesame Seed Meal",
+    ],
+    id: "ind-3",
+  },
+  {
+    title: "Bran",
+    note: "Nutritional milling byproducts",
+    image: "/industries/category_4.jpg",
+    items: [
+      "Rice Bran",
+      "Wheat Bran",
+      "Arhar Bran",
+      "Chickpea",
+      "Lentil Bran",
+      "Pea Bran",
+      "Pea Husk",
+    ],
+    id: "ind-4",
+  },
 ];
 
 const WHY = [
@@ -210,7 +266,7 @@ export default function Landing() {
                   "
                   data-testid="hero-badge"
                 >
-                  Commission agents for B2B growth
+                  41-Year's of Legacy.
                 </Badge>
 
                 <h1
@@ -220,7 +276,7 @@ export default function Landing() {
                   "
                   data-testid="hero-title"
                 >
-                  Om Convessing Agency
+                  Om Convassing Agency
                 </h1>
 
                 <p
@@ -230,9 +286,10 @@ export default function Landing() {
                   "
                   data-testid="hero-subtitle"
                 >
-                  Representing manufacturers and B2B providers with a sales system built on
-                  credibility, consistent execution, and transparent reporting — led by Ravi Gupta
-                  and B.L. Gupta in Satna, Madhya Pradesh.
+                  Trusted Broker & Commission Agent Connecting Buyers & Sellers
+                  | Consistent Execution, Transparent Reporting | Satna's Most
+                  Reliable Partner in Grain & Cattle Feed Trading— led by Ravi
+                  Gupta and B.L. Gupta in Satna, Madhya Pradesh.
                 </p>
 
                 <div className="mt-8 flex flex-col sm:flex-row gap-3 sm:items-center">
@@ -249,7 +306,7 @@ export default function Landing() {
                     data-testid="hero-cta-primary"
                   >
                     <a href="#contact">
-                      Request a callback
+                      Contact Us -
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </a>
                   </Button>
@@ -284,11 +341,26 @@ export default function Landing() {
                   </div>
                 </div>
 
-                <div className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-3" data-testid="hero-metrics">
+                <div
+                  className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-3"
+                  data-testid="hero-metrics"
+                >
                   {[
-                    { k: "30–90 days", v: "time to first qualified meetings", id: "m1" },
-                    { k: "Monthly", v: "structured reporting cadence", id: "m2" },
-                    { k: "Outcome-led", v: "commission-aligned incentives", id: "m3" },
+                    {
+                      k: "30–90 days",
+                      v: "time to first qualified meetings",
+                      id: "m1",
+                    },
+                    {
+                      k: "Monthly",
+                      v: "structured reporting cadence",
+                      id: "m2",
+                    },
+                    {
+                      k: "Outcome-led",
+                      v: "commission-aligned incentives",
+                      id: "m3",
+                    },
                   ].map((m) => (
                     <div
                       key={m.id}
@@ -298,8 +370,12 @@ export default function Landing() {
                       "
                       data-testid={`hero-metric-${m.id}`}
                     >
-                      <div className="text-lg sm:text-xl font-semibold tracking-tight">{m.k}</div>
-                      <div className="mt-1 text-xs sm:text-sm text-muted-foreground">{m.v}</div>
+                      <div className="text-lg sm:text-xl font-semibold tracking-tight">
+                        {m.k}
+                      </div>
+                      <div className="mt-1 text-xs sm:text-sm text-muted-foreground">
+                        {m.v}
+                      </div>
                     </div>
                   ))}
                 </div>
@@ -320,12 +396,12 @@ export default function Landing() {
       {/* ABOUT */}
       <Section
         id="about"
-        eyebrow="About"
-        title="A commission partner built for modern B2B buying."
-        description="We combine territory planning, relationship-led outreach, and a measurable pipeline system — designed for manufacturers and B2B providers where trust wins deals."
+        eyebrow="About & Products"
+        title="B2B Trading & Commission Services."
+        description="We combine territory planning, relationship-led outreach, and a comprehensive catalogue of agricultural commodities — designed for manufacturers where quality and trust win deals."
         data-testid="section-about"
       >
-        <div className="grid gap-6 lg:grid-cols-3">
+        <div className="grid gap-6 lg:grid-cols-3 mb-16">
           <div className="lg:col-span-2">
             <div
               className="
@@ -401,8 +477,8 @@ export default function Landing() {
                   What clients remember
                 </div>
                 <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
-                  Clarity. Consistency. Accountability. You’ll never wonder where a deal stands — or
-                  what we’re doing to move it forward.
+                  Clarity. Consistency. Accountability. You’ll never wonder
+                  where a deal stands — or what we’re doing to move it forward.
                 </p>
               </div>
             </div>
@@ -420,17 +496,28 @@ export default function Landing() {
               <div className="text-xs font-semibold tracking-[0.18em] uppercase text-primary/90">
                 Typical engagement
               </div>
-              <div className="mt-3 text-2xl leading-tight">Defined territory, defined outcomes.</div>
+              <div className="mt-3 text-2xl leading-tight">
+                Defined territory, defined outcomes.
+              </div>
               <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
-                We align on the accounts, channels, and monthly activity expectations. Then we execute
-                with a repeatable cadence and a shared pipeline view.
+                We align on the accounts, channels, and monthly activity
+                expectations. Then we execute with a repeatable cadence and a
+                shared pipeline view.
               </p>
 
               <div className="mt-6 grid gap-3">
                 {[
                   { k: "Territory", v: "Region / channel-based", id: "s1" },
-                  { k: "Model", v: "Commission + aligned incentives", id: "s2" },
-                  { k: "Cadence", v: "Weekly activity, monthly review", id: "s3" },
+                  {
+                    k: "Model",
+                    v: "Commission + aligned incentives",
+                    id: "s2",
+                  },
+                  {
+                    k: "Cadence",
+                    v: "Weekly activity, monthly review",
+                    id: "s3",
+                  },
                 ].map((r) => (
                   <div
                     key={r.id}
@@ -459,6 +546,50 @@ export default function Landing() {
             </div>
           </div>
         </div>
+
+        {/* INDUSTRIES GRID MOVED HERE */}
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {INDUSTRIES.map((i) => (
+            <div
+              key={i.id}
+              className="
+                group overflow-hidden rounded-3xl border border-border/60 bg-card/70
+                shadow-sm hover:shadow-lift transition-all duration-500
+              "
+              data-testid={`industry-${i.id}`}
+            >
+              <div className="aspect-[4/3] overflow-hidden relative">
+                <img
+                  src={i.image}
+                  alt={i.title}
+                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60" />
+                <div className="absolute bottom-4 left-4 text-white">
+                  <div className="text-xl font-bold tracking-tight">
+                    {i.title}
+                  </div>
+                </div>
+              </div>
+              <div className="p-5">
+                <div className="text-xs font-semibold text-primary uppercase tracking-wider mb-2">
+                  {i.note}
+                </div>
+                <ul className="space-y-1">
+                  {i.items?.map((item, idx) => (
+                    <li
+                      key={idx}
+                      className="flex items-center gap-2 text-sm text-muted-foreground"
+                    >
+                      <div className="h-1 w-1 rounded-full bg-primary/40" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          ))}
+        </div>
       </Section>
 
       {/* SERVICES */}
@@ -479,42 +610,6 @@ export default function Landing() {
               description={s.description}
               data-testid={`service-${s.id}`}
             />
-          ))}
-        </div>
-      </Section>
-
-      {/* INDUSTRIES */}
-      <Section
-        id="industries"
-        eyebrow="Industries"
-        title="Built for complex products and considered purchases."
-        description="We thrive where trust and technical credibility matter — and where relationships create compounding revenue."
-        data-testid="section-industries"
-      >
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {INDUSTRIES.map((i) => (
-            <div
-              key={i.id}
-              className="
-                rounded-2xl border border-border/60 bg-card/70 p-6
-                shadow-sm hover:shadow-soft hover:-translate-y-0.5
-                transition-all duration-300
-              "
-              data-testid={`industry-${i.id}`}
-            >
-              <div
-                className="
-                  grid h-12 w-12 place-items-center rounded-2xl
-                  bg-secondary/60 border border-border/60
-                  text-primary
-                "
-                aria-hidden="true"
-              >
-                {i.icon}
-              </div>
-              <div className="mt-4 text-base font-semibold">{i.title}</div>
-              <div className="mt-2 text-sm text-muted-foreground leading-relaxed">{i.note}</div>
-            </div>
           ))}
         </div>
       </Section>
@@ -554,7 +649,9 @@ export default function Landing() {
                     <BadgeCheck className="h-5 w-5" />
                   </div>
                   <div>
-                    <div className="text-lg font-semibold tracking-tight">{w.title}</div>
+                    <div className="text-lg font-semibold tracking-tight">
+                      {w.title}
+                    </div>
                     <div className="mt-2 text-sm text-muted-foreground leading-relaxed">
                       {w.description}
                     </div>
@@ -589,16 +686,33 @@ export default function Landing() {
                   A sales partner you can trust with your reputation.
                 </div>
                 <p className="mt-3 text-sm sm:text-base text-muted-foreground leading-relaxed">
-                  Our operating model is simple: fewer clients, deeper focus, and measurable execution.
-                  We’d rather win the right deals than chase the wrong ones.
+                  Our operating model is simple: fewer clients, deeper focus,
+                  and measurable execution. We’d rather win the right deals than
+                  chase the wrong ones.
                 </p>
 
                 <div className="mt-7 grid gap-3">
                   {[
-                    { label: "Account plans", value: "Built + maintained", icon: <Target className="h-4.5 w-4.5" /> },
-                    { label: "Meeting quality", value: "Qualified + documented", icon: <Handshake className="h-4.5 w-4.5" /> },
-                    { label: "Visibility", value: "Pipeline + next steps", icon: <BarChart3 className="h-4.5 w-4.5" /> },
-                    { label: "Integrity", value: "Brand-safe execution", icon: <ShieldCheck className="h-4.5 w-4.5" /> },
+                    {
+                      label: "Account plans",
+                      value: "Built + maintained",
+                      icon: <Target className="h-4.5 w-4.5" />,
+                    },
+                    {
+                      label: "Meeting quality",
+                      value: "Qualified + documented",
+                      icon: <Handshake className="h-4.5 w-4.5" />,
+                    },
+                    {
+                      label: "Visibility",
+                      value: "Pipeline + next steps",
+                      icon: <BarChart3 className="h-4.5 w-4.5" />,
+                    },
+                    {
+                      label: "Integrity",
+                      value: "Brand-safe execution",
+                      icon: <ShieldCheck className="h-4.5 w-4.5" />,
+                    },
                   ].map((row, idx) => (
                     <div
                       key={idx}
@@ -611,7 +725,9 @@ export default function Landing() {
                         </div>
                         <div className="text-sm font-semibold">{row.label}</div>
                       </div>
-                      <div className="text-xs sm:text-sm text-muted-foreground">{row.value}</div>
+                      <div className="text-xs sm:text-sm text-muted-foreground">
+                        {row.value}
+                      </div>
                     </div>
                   ))}
                 </div>
@@ -674,7 +790,9 @@ export default function Landing() {
                   </div>
                 </div>
                 <div className="mt-3 text-base font-semibold">{p.title}</div>
-                <div className="mt-2 text-sm text-muted-foreground leading-relaxed">{p.desc}</div>
+                <div className="mt-2 text-sm text-muted-foreground leading-relaxed">
+                  {p.desc}
+                </div>
               </div>
             </div>
           ))}
@@ -692,7 +810,8 @@ export default function Landing() {
               Want a transparent pipeline without the overhead?
             </div>
             <div className="mt-2 text-sm text-muted-foreground leading-relaxed">
-              Share your territory and product. We’ll respond with next steps and a suggested 30-day plan.
+              Share your territory and product. We’ll respond with next steps
+              and a suggested 30-day plan.
             </div>
           </div>
           <div className="flex items-center gap-3">
@@ -772,15 +891,22 @@ export default function Landing() {
       </Section>
 
       {/* FOOTER */}
-      <footer className="border-t border-border/60 bg-background" data-testid="site-footer">
+      <footer
+        className="border-t border-border/60 bg-background"
+        data-testid="site-footer"
+      >
         <div className="container-pad py-10">
           <div className="grid gap-8 md:grid-cols-3">
             <div>
               <div className="font-display text-lg" data-testid="footer-brand">
                 Om Convassing Agency
               </div>
-              <p className="mt-2 text-sm text-muted-foreground leading-relaxed" data-testid="footer-blurb">
-                Premium representation for manufacturers and B2B providers — led by Ravi Gupta and B.L. Gupta in Satna.
+              <p
+                className="mt-2 text-sm text-muted-foreground leading-relaxed"
+                data-testid="footer-blurb"
+              >
+                Premium representation for manufacturers and B2B providers — led
+                by Ravi Gupta and B.L. Gupta in Satna.
               </p>
             </div>
 
@@ -788,16 +914,35 @@ export default function Landing() {
               <div className="text-xs font-semibold tracking-[0.18em] uppercase text-muted-foreground">
                 Contact
               </div>
-              <div className="text-muted-foreground">8269666320 (Ravi Gupta)</div>
-              <div className="text-muted-foreground">9303320625 (B.L. Gupta)</div>
-              <div className="text-muted-foreground">T.T Nagar, Infront of Shivpuram Colony, Satna Madhya Pradesh (485001)</div>
+              <div className="text-muted-foreground">
+                8269666320 (Ravi Gupta)
+              </div>
+              <div className="text-muted-foreground">
+                9303320625 (B.L. Gupta)
+              </div>
+              <div className="text-xs font-semibold tracking-[0.18em] uppercase text-muted-foreground">
+                Telephone
+              </div>
+              <div className="text-muted-foreground">07672-411502</div>
+              <div className="text-muted-foreground">07672-406963</div>
+
+              <div className="text-xs font-semibold tracking-[0.18em] uppercase text-muted-foreground">
+                Address
+              </div>
+              <div className="text-muted-foreground">
+                T.T Nagar, Infront of Shivpuram Colony, Satna Madhya Pradesh
+                (485001)
+              </div>
             </div>
 
             <div className="md:text-right">
               <div className="text-xs font-semibold tracking-[0.18em] uppercase text-muted-foreground">
                 Proprietor
               </div>
-              <div className="mt-2 inline-flex items-center gap-2 text-sm text-muted-foreground" data-testid="footer-note">
+              <div
+                className="mt-2 inline-flex items-center gap-2 text-sm text-muted-foreground"
+                data-testid="footer-note"
+              >
                 <ShieldCheck className="h-4 w-4 text-primary" />
                 Ravi Gupta
               </div>
@@ -813,7 +958,7 @@ export default function Landing() {
                   "
                   data-testid="footer-cta"
                 >
-                  <a href="#contact">Request a callback</a>
+                  <a href="#contact">Contact Us</a>
                 </Button>
               </div>
             </div>
@@ -826,7 +971,10 @@ export default function Landing() {
             "
             data-testid="footer-bottom"
           >
-            <div>© {new Date().getFullYear()} Om Convassing Agency. All rights reserved.</div>
+            <div>
+              © {new Date().getFullYear()} Om Convassing Agency. All rights
+              reserved.
+            </div>
             <div className="flex items-center gap-2">
               <span className="opacity-70">Designed for clarity.</span>
               <span aria-hidden="true">•</span>
