@@ -11,7 +11,11 @@ type Field = "name" | "email" | "company" | "phone" | "message";
 
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-export function ContactForm({ "data-testid": testId }: { "data-testid"?: string }) {
+export function ContactForm({
+  "data-testid": testId,
+}: {
+  "data-testid"?: string;
+}) {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -23,7 +27,9 @@ export function ContactForm({ "data-testid": testId }: { "data-testid"?: string 
     message: "",
   });
 
-  const [fieldError, setFieldError] = useState<Partial<Record<Field, string>>>({});
+  const [fieldError, setFieldError] = useState<Partial<Record<Field, string>>>(
+    {},
+  );
 
   const canSubmit = useMemo(() => {
     if (isSubmitting) return false;
@@ -44,15 +50,19 @@ export function ContactForm({ "data-testid": testId }: { "data-testid"?: string 
 
     // Frontend validation
     const nextErrors: Partial<Record<Field, string>> = {};
-    if (form.name.trim().length < 2) nextErrors.name = "Please enter your full name.";
-    if (!emailRegex.test(form.email.trim())) nextErrors.email = "Please enter a valid email address.";
-    if (form.message.trim().length < 10) nextErrors.message = "Please provide a short message (10+ characters).";
+    if (form.name.trim().length < 2)
+      nextErrors.name = "Please enter your full name.";
+    if (!emailRegex.test(form.email.trim()))
+      nextErrors.email = "Please enter a valid email address.";
+    if (form.message.trim().length < 10)
+      nextErrors.message = "Please provide a short message (10+ characters).";
 
     if (Object.keys(nextErrors).length) {
       setFieldError(nextErrors);
       toast({
         title: "Please check your details",
-        description: "A few fields need attention before we can send your inquiry.",
+        description:
+          "A few fields need attention before we can send your inquiry.",
         variant: "destructive",
       });
       return;
@@ -99,7 +109,10 @@ export function ContactForm({ "data-testid": testId }: { "data-testid"?: string 
           setFieldError(json.fieldErrors);
         }
 
-        const serverMessage = json?.error || json?.message || "Failed to send. Please try again later.";
+        const serverMessage =
+          json?.error ||
+          json?.message ||
+          "Failed to send. Please try again later.";
         toast({
           title: "Couldn't send inquiry",
           description: serverMessage,
@@ -107,7 +120,8 @@ export function ContactForm({ "data-testid": testId }: { "data-testid"?: string 
         });
       }
     } catch (err) {
-      const message = err instanceof Error ? err.message : "Something went wrong.";
+      const message =
+        err instanceof Error ? err.message : "Something went wrong.";
       toast({
         title: "Couldn't send inquiry",
         description: message,
@@ -121,25 +135,41 @@ export function ContactForm({ "data-testid": testId }: { "data-testid"?: string 
 
   return (
     <div className="relative">
-      <div className="absolute inset-0 -z-10 rounded-3xl hero-mesh opacity-70" aria-hidden="true" />
+      <div
+        className="absolute inset-0 -z-10 rounded-3xl hero-mesh opacity-70"
+        aria-hidden="true"
+      />
       <div className="relative overflow-hidden rounded-3xl border border-border/60 bg-card/60 backdrop-blur-xl shadow-soft">
         <div className="grid gap-0 lg:grid-cols-5">
           <div className="lg:col-span-2 p-7 sm:p-8 border-b lg:border-b-0 lg:border-r border-border/60">
             <div className="flex items-center gap-2">
-              <Badge className="rounded-full bg-secondary text-foreground border border-border/60" data-testid="contact-badge">
+              <Badge
+                className="rounded-full bg-secondary text-foreground border border-border/60"
+                data-testid="contact-badge"
+              >
                 Contact
               </Badge>
-              <div className="text-xs text-muted-foreground" data-testid="contact-response-time">
+              <div
+                className="text-xs text-muted-foreground"
+                data-testid="contact-response-time"
+              >
                 Typical response: within 1 business day
               </div>
             </div>
 
-            <h3 className="mt-4 text-2xl sm:text-3xl leading-tight" data-testid="contact-title">
+            <h3
+              className="mt-4 text-2xl sm:text-3xl leading-tight"
+              data-testid="contact-title"
+            >
               Tell us what you're selling — we'll tell you how we'll grow it.
             </h3>
-            <p className="mt-3 text-sm sm:text-base text-muted-foreground leading-relaxed" data-testid="contact-subtitle">
-              We represent manufacturers and service providers with a disciplined pipeline:
-              targeted outreach, relationship-led selling, and transparent reporting.
+            <p
+              className="mt-3 text-sm sm:text-base text-muted-foreground leading-relaxed"
+              data-testid="contact-subtitle"
+            >
+              We represent manufacturers and service providers with a
+              disciplined pipeline: targeted outreach, relationship-led selling,
+              and transparent reporting.
             </p>
 
             <div className="mt-6 grid gap-3 text-sm">
@@ -170,10 +200,17 @@ export function ContactForm({ "data-testid": testId }: { "data-testid"?: string 
           </div>
 
           <div className="lg:col-span-3 p-7 sm:p-8">
-            <form onSubmit={onSubmit} className="grid gap-4" data-testid={testId ?? "contact-form"}>
+            <form
+              onSubmit={onSubmit}
+              className="grid gap-4"
+              data-testid={testId ?? "contact-form"}
+            >
               <div className="grid gap-4 md:grid-cols-2">
                 <div>
-                  <label className="text-xs font-semibold text-muted-foreground" htmlFor="name">
+                  <label
+                    className="text-xs font-semibold text-muted-foreground"
+                    htmlFor="name"
+                  >
                     Full name
                   </label>
                   <div className="mt-2 relative">
@@ -189,14 +226,20 @@ export function ContactForm({ "data-testid": testId }: { "data-testid"?: string 
                     />
                   </div>
                   {fieldError.name ? (
-                    <div className="mt-2 text-xs text-destructive" data-testid="contact-name-error">
+                    <div
+                      className="mt-2 text-xs text-destructive"
+                      data-testid="contact-name-error"
+                    >
                       {fieldError.name}
                     </div>
                   ) : null}
                 </div>
 
                 <div>
-                  <label className="text-xs font-semibold text-muted-foreground" htmlFor="email">
+                  <label
+                    className="text-xs font-semibold text-muted-foreground"
+                    htmlFor="email"
+                  >
                     Email
                   </label>
                   <div className="mt-2 relative">
@@ -212,15 +255,22 @@ export function ContactForm({ "data-testid": testId }: { "data-testid"?: string 
                     />
                   </div>
                   {fieldError.email ? (
-                    <div className="mt-2 text-xs text-destructive" data-testid="contact-email-error">
+                    <div
+                      className="mt-2 text-xs text-destructive"
+                      data-testid="contact-email-error"
+                    >
                       {fieldError.email}
                     </div>
                   ) : null}
                 </div>
 
                 <div>
-                  <label className="text-xs font-semibold text-muted-foreground" htmlFor="company">
-                    Company <span className="text-muted-foreground/70">(optional)</span>
+                  <label
+                    className="text-xs font-semibold text-muted-foreground"
+                    htmlFor="company"
+                  >
+                    Company{" "}
+                    <span className="text-muted-foreground/70">(optional)</span>
                   </label>
                   <div className="mt-2 relative">
                     <Building2 className="absolute left-3 top-3.5 h-4 w-4 text-muted-foreground" />
@@ -235,15 +285,22 @@ export function ContactForm({ "data-testid": testId }: { "data-testid"?: string 
                     />
                   </div>
                   {fieldError.company ? (
-                    <div className="mt-2 text-xs text-destructive" data-testid="contact-company-error">
+                    <div
+                      className="mt-2 text-xs text-destructive"
+                      data-testid="contact-company-error"
+                    >
                       {fieldError.company}
                     </div>
                   ) : null}
                 </div>
 
                 <div>
-                  <label className="text-xs font-semibold text-muted-foreground" htmlFor="phone">
-                    Phone <span className="text-muted-foreground/70">(optional)</span>
+                  <label
+                    className="text-xs font-semibold text-muted-foreground"
+                    htmlFor="phone"
+                  >
+                    Phone{" "}
+                    <span className="text-muted-foreground/70">(optional)</span>
                   </label>
                   <div className="mt-2 relative">
                     <Phone className="absolute left-3 top-3.5 h-4 w-4 text-muted-foreground" />
@@ -258,7 +315,10 @@ export function ContactForm({ "data-testid": testId }: { "data-testid"?: string 
                     />
                   </div>
                   {fieldError.phone ? (
-                    <div className="mt-2 text-xs text-destructive" data-testid="contact-phone-error">
+                    <div
+                      className="mt-2 text-xs text-destructive"
+                      data-testid="contact-phone-error"
+                    >
                       {fieldError.phone}
                     </div>
                   ) : null}
@@ -266,7 +326,10 @@ export function ContactForm({ "data-testid": testId }: { "data-testid"?: string 
               </div>
 
               <div>
-                <label className="text-xs font-semibold text-muted-foreground" htmlFor="message">
+                <label
+                  className="text-xs font-semibold text-muted-foreground"
+                  htmlFor="message"
+                >
                   What can we help with?
                 </label>
                 <div className="mt-2">
@@ -282,23 +345,36 @@ export function ContactForm({ "data-testid": testId }: { "data-testid"?: string 
                 </div>
                 <div className="mt-2 flex items-center justify-between gap-3">
                   {fieldError.message ? (
-                    <div className="text-xs text-destructive" data-testid="contact-message-error">
+                    <div
+                      className="text-xs text-destructive"
+                      data-testid="contact-message-error"
+                    >
                       {fieldError.message}
                     </div>
                   ) : (
-                    <div className="text-xs text-muted-foreground" data-testid="contact-message-hint">
+                    <div
+                      className="text-xs text-muted-foreground"
+                      data-testid="contact-message-hint"
+                    >
                       Be as brief or detailed as you'd like — we'll follow up.
                     </div>
                   )}
-                  <div className="text-xs text-muted-foreground tabular-nums" data-testid="contact-message-count">
+                  <div
+                    className="text-xs text-muted-foreground tabular-nums"
+                    data-testid="contact-message-count"
+                  >
                     {form.message.trim().length}/10+
                   </div>
                 </div>
               </div>
 
               <div className="flex flex-col sm:flex-row gap-3 sm:items-center sm:justify-between pt-2">
-                <div className="text-xs text-muted-foreground" data-testid="contact-privacy">
-                  By submitting, you agree we can contact you about your inquiry. No spam.
+                <div
+                  className="text-xs text-muted-foreground"
+                  data-testid="contact-privacy"
+                >
+                  By submitting, you agree we can contact you about your
+                  inquiry. No spam.
                 </div>
 
                 <Button

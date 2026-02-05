@@ -10,6 +10,13 @@
    - Body: Manrope (technical, crisp)
    - Palette: ink + porcelain + teal/copper accents
 ------------------------------------------------------------------------ */
+*::-webkit-scrollbar {
+  cursor: pointer;
+}
+
+* {
+  scrollbar-color: #055124 transparent;
+}
 
 :root {
   --font-sans: "Manrope", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto,

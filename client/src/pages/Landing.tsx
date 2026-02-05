@@ -7,6 +7,8 @@ import { Faq } from "@/components/Faq";
 import { ContactForm } from "@/components/ContactForm";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import CategoryCarousel, { CategoryItem } from "../components/CategoryCarousel";
+
 import {
   ArrowRight,
   BadgeCheck,
@@ -65,13 +67,6 @@ const SERVICES = [
       "Your company is represented with consistency, professionalism, and clear messaging across every touchpoint.",
     id: "svc-6",
   },
-];
-
-const INDUSTRIES = [
-  { title: "Industrial supplies", note: "OEM, MRO, and engineered components", icon: <Factory className="h-5 w-5" />, id: "ind-1" },
-  { title: "Building materials", note: "Commercial & residential channels", icon: <Layers3 className="h-5 w-5" />, id: "ind-2" },
-  { title: "Manufacturing services", note: "Contract manufacturing & assembly", icon: <Sparkles className="h-5 w-5" />, id: "ind-3" },
-  { title: "B2B SaaS (select)", note: "Operations and procurement tools", icon: <BadgeCheck className="h-5 w-5" />, id: "ind-4" },
 ];
 
 const WHY = [
@@ -186,6 +181,122 @@ const FAQ_ITEMS = [
   },
 ];
 
+const cereals: CategoryItem[] = [
+
+  {
+    id: "c2",
+    label: "Green Millets",
+    imgSrc: "/industries/cereals_green_millets.jpg",
+  },
+  { id: "c3", label: "Chana Dal", imgSrc: "/industries/cereals_chana_dal.jpg" },
+  { id: "c4", label: "Chickpeas", imgSrc: "/industries/cereals_chickpeas.jpg" },
+  {
+    id: "c5",
+    label: "Wheat Flour",
+    imgSrc: "/industries/cereals_wheat_flour.jpg",
+  },
+  {
+    id: "c6",
+    label: "Desi Chana",
+    imgSrc: "/industries/cereals_desi_chana.jpg",
+  },
+  {
+    id: "c7",
+    label: "Yellow Corn Maize",
+    imgSrc: "/industries/cereals_yellow_corn.jpg",
+  },
+  { id: "c8", label: "Wheat", imgSrc: "/industries/cereals_wheat.jpg" },
+  {
+    id: "c9",
+    label: "Sorghum Seeds",
+    imgSrc: "/industries/cereals_sorghum.jpg",
+  },
+  {
+    id: "c10",
+    label: "1121 Basmati Rice",
+    imgSrc: "/industries/cereals_1121_basmati.jpg",
+  },
+  {
+    id: "c11",
+    label: "Sona Masoori Rice",
+    imgSrc: "/industries/cereals_sona_masoori.jpg",
+  },
+  { id: "c12", label: "RI-36 Rice", imgSrc: "/industries/cereals_ri36.jpg" },
+];
+
+const oilSeeds: CategoryItem[] = [
+
+  {
+    id: "o2",
+    label: "Black Mustard",
+    imgSrc: "/industries/oil_black_mustard.jpg",
+  },
+  {
+    id: "o3",
+    label: "Yellow Soyabean",
+    imgSrc: "/industries/oil_yellow_soyabean.jpg",
+  },
+  {
+    id: "o4",
+    label: "Yellow Mustard",
+    imgSrc: "/industries/oil_yellow_mustard.jpg",
+  },
+  {
+    id: "o5",
+    label: "Sunflower Seeds",
+    imgSrc: "/industries/oil_sunflower.jpg",
+  },
+];
+
+const oilSeedCakes: CategoryItem[] = [
+
+  {
+    id: "oc2",
+    label: "Groundnut Oil Cake",
+    imgSrc: "/industries/oilcakes_groundnut.jpg",
+  },
+  {
+    id: "oc3",
+    label: "Sunflower Oil Cake",
+    imgSrc: "/industries/oilcakes_sunflower.jpg",
+  },
+  {
+    id: "oc4",
+    label: "Cottonseed Meal",
+    imgSrc: "/industries/oilcakes_cottonseed.jpg",
+  },
+  {
+    id: "oc5",
+    label: "Linseed Meal",
+    imgSrc: "/industries/oilcakes_linseed.jpg",
+  },
+  {
+    id: "oc6",
+    label: "Mustard Cake",
+    imgSrc: "/industries/oilcakes_mustard.jpg",
+  },
+  {
+    id: "oc7",
+    label: "Sesame Seed Meal",
+    imgSrc: "/industries/oilcakes_sesame.jpg",
+  },
+];
+
+const bran: CategoryItem[] = [
+  {
+    id: "b0",
+    label: "Nutritional milling byproducts",
+    imgSrc: "/industries/bran_nutritional_byproducts.jpg",
+  },
+  { id: "b1", label: "Rice Bran", imgSrc: "/industries/bran_rice_bran.jpg" },
+  { id: "b2", label: "Wheat Bran", imgSrc: "/industries/bran_wheat_bran.jpg" },
+  { id: "b3", label: "Arhar Bran", imgSrc: "/industries/bran_arhar.jpg" },
+  { id: "b4", label: "Chickpea", imgSrc: "/industries/bran_chickpea.jpg" },
+  { id: "b5", label: "Lentil Bran", imgSrc: "/industries/bran_lentil.jpg" },
+  { id: "b6", label: "Pea Bran", imgSrc: "/industries/bran_pea_bran.jpg" },
+  { id: "b7", label: "Pea Husk", imgSrc: "/industries/bran_pea_husk.jpg" },
+];
+
 export default function Landing() {
   return (
     <div className="min-h-screen">
@@ -220,7 +331,7 @@ export default function Landing() {
                   "
                   data-testid="hero-title"
                 >
-                  Om Canvassing Agency
+                  Om Convessing Agency
                 </h1>
 
                 <p
@@ -230,7 +341,8 @@ export default function Landing() {
                   "
                   data-testid="hero-subtitle"
                 >
-                  Trusted Broker & Commission Agent Connecting Buyers & Sellers | Consistent Execution, Transparent Reporting | Satna's Most Reliable Partner in Grain & Cattle Feed Trading— led by Ravi Gupta
+                  Representing manufacturers and B2B providers with a sales system built on
+                  credibility, consistent execution, and transparent reporting — led by Ravi Gupta
                   and B.L. Gupta in Satna, Madhya Pradesh.
                 </p>
 
@@ -248,7 +360,7 @@ export default function Landing() {
                     data-testid="hero-cta-primary"
                   >
                     <a href="#contact">
-                      Contact Us -
+                      Request a callback
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </a>
                   </Button>
@@ -283,11 +395,26 @@ export default function Landing() {
                   </div>
                 </div>
 
-                <div className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-3" data-testid="hero-metrics">
+                <div
+                  className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-3"
+                  data-testid="hero-metrics"
+                >
                   {[
-                    { k: "30–90 days", v: "time to first qualified meetings", id: "m1" },
-                    { k: "Monthly", v: "structured reporting cadence", id: "m2" },
-                    { k: "Outcome-led", v: "commission-aligned incentives", id: "m3" },
+                    {
+                      k: "30–90 days",
+                      v: "time to first qualified meetings",
+                      id: "m1",
+                    },
+                    {
+                      k: "Monthly",
+                      v: "structured reporting cadence",
+                      id: "m2",
+                    },
+                    {
+                      k: "Outcome-led",
+                      v: "commission-aligned incentives",
+                      id: "m3",
+                    },
                   ].map((m) => (
                     <div
                       key={m.id}
@@ -297,8 +424,12 @@ export default function Landing() {
                       "
                       data-testid={`hero-metric-${m.id}`}
                     >
-                      <div className="text-lg sm:text-xl font-semibold tracking-tight">{m.k}</div>
-                      <div className="mt-1 text-xs sm:text-sm text-muted-foreground">{m.v}</div>
+                      <div className="text-lg sm:text-xl font-semibold tracking-tight">
+                        {m.k}
+                      </div>
+                      <div className="mt-1 text-xs sm:text-sm text-muted-foreground">
+                        {m.v}
+                      </div>
                     </div>
                   ))}
                 </div>
@@ -319,12 +450,12 @@ export default function Landing() {
       {/* ABOUT */}
       <Section
         id="about"
-        eyebrow="About"
-        title="A commission partner built for modern B2B buying."
-        description="We combine territory planning, relationship-led outreach, and a measurable pipeline system — designed for manufacturers and B2B providers where trust wins deals."
+        eyebrow="About & Products"
+        title="B2B Trading & Commission Services."
+        description="We combine territory planning, relationship-led outreach, and a comprehensive catalogue of agricultural commodities — designed for manufacturers where quality and trust win deals."
         data-testid="section-about"
       >
-        <div className="grid gap-6 lg:grid-cols-3">
+        <div className="grid gap-6 lg:grid-cols-3 mb-16">
           <div className="lg:col-span-2">
             <div
               className="
@@ -400,8 +531,8 @@ export default function Landing() {
                   What clients remember
                 </div>
                 <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
-                  Clarity. Consistency. Accountability. You’ll never wonder where a deal stands — or
-                  what we’re doing to move it forward.
+                  Clarity. Consistency. Accountability. You’ll never wonder
+                  where a deal stands — or what we’re doing to move it forward.
                 </p>
               </div>
             </div>
@@ -419,17 +550,28 @@ export default function Landing() {
               <div className="text-xs font-semibold tracking-[0.18em] uppercase text-primary/90">
                 Typical engagement
               </div>
-              <div className="mt-3 text-2xl leading-tight">Defined territory, defined outcomes.</div>
+              <div className="mt-3 text-2xl leading-tight">
+                Defined territory, defined outcomes.
+              </div>
               <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
-                We align on the accounts, channels, and monthly activity expectations. Then we execute
-                with a repeatable cadence and a shared pipeline view.
+                We align on the accounts, channels, and monthly activity
+                expectations. Then we execute with a repeatable cadence and a
+                shared pipeline view.
               </p>
 
               <div className="mt-6 grid gap-3">
                 {[
                   { k: "Territory", v: "Region / channel-based", id: "s1" },
-                  { k: "Model", v: "Commission + aligned incentives", id: "s2" },
-                  { k: "Cadence", v: "Weekly activity, monthly review", id: "s3" },
+                  {
+                    k: "Model",
+                    v: "Commission + aligned incentives",
+                    id: "s2",
+                  },
+                  {
+                    k: "Cadence",
+                    v: "Weekly activity, monthly review",
+                    id: "s3",
+                  },
                 ].map((r) => (
                   <div
                     key={r.id}
@@ -458,6 +600,20 @@ export default function Landing() {
             </div>
           </div>
         </div>
+        <CategoryCarousel title="Cereals" detail="Primary grains and pulses" items={cereals} />
+
+        <div className="h-6" />
+        <CategoryCarousel title="Oil Seeds" detail="High-yield oil crops" items={oilSeeds} />
+      
+        <div className="h-6" /> 
+        <CategoryCarousel
+          title="Oil Seed Cakes"
+          detail="Premium extraction meals"
+          items={oilSeedCakes}
+        />
+        {/* Bran */}
+        <div className="h-6" />
+        <CategoryCarousel title="Bran" detail="Nutritional milling byproducts" items={bran}/>
       </Section>
 
       {/* SERVICES */}
@@ -478,42 +634,6 @@ export default function Landing() {
               description={s.description}
               data-testid={`service-${s.id}`}
             />
-          ))}
-        </div>
-      </Section>
-
-      {/* INDUSTRIES */}
-      <Section
-        id="industries"
-        eyebrow="Industries"
-        title="Built for complex products and considered purchases."
-        description="We thrive where trust and technical credibility matter — and where relationships create compounding revenue."
-        data-testid="section-industries"
-      >
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {INDUSTRIES.map((i) => (
-            <div
-              key={i.id}
-              className="
-                rounded-2xl border border-border/60 bg-card/70 p-6
-                shadow-sm hover:shadow-soft hover:-translate-y-0.5
-                transition-all duration-300
-              "
-              data-testid={`industry-${i.id}`}
-            >
-              <div
-                className="
-                  grid h-12 w-12 place-items-center rounded-2xl
-                  bg-secondary/60 border border-border/60
-                  text-primary
-                "
-                aria-hidden="true"
-              >
-                {i.icon}
-              </div>
-              <div className="mt-4 text-base font-semibold">{i.title}</div>
-              <div className="mt-2 text-sm text-muted-foreground leading-relaxed">{i.note}</div>
-            </div>
           ))}
         </div>
       </Section>
@@ -553,7 +673,9 @@ export default function Landing() {
                     <BadgeCheck className="h-5 w-5" />
                   </div>
                   <div>
-                    <div className="text-lg font-semibold tracking-tight">{w.title}</div>
+                    <div className="text-lg font-semibold tracking-tight">
+                      {w.title}
+                    </div>
                     <div className="mt-2 text-sm text-muted-foreground leading-relaxed">
                       {w.description}
                     </div>
@@ -588,16 +710,33 @@ export default function Landing() {
                   A sales partner you can trust with your reputation.
                 </div>
                 <p className="mt-3 text-sm sm:text-base text-muted-foreground leading-relaxed">
-                  Our operating model is simple: fewer clients, deeper focus, and measurable execution.
-                  We’d rather win the right deals than chase the wrong ones.
+                  Our operating model is simple: fewer clients, deeper focus,
+                  and measurable execution. We’d rather win the right deals than
+                  chase the wrong ones.
                 </p>
 
                 <div className="mt-7 grid gap-3">
                   {[
-                    { label: "Account plans", value: "Built + maintained", icon: <Target className="h-4.5 w-4.5" /> },
-                    { label: "Meeting quality", value: "Qualified + documented", icon: <Handshake className="h-4.5 w-4.5" /> },
-                    { label: "Visibility", value: "Pipeline + next steps", icon: <BarChart3 className="h-4.5 w-4.5" /> },
-                    { label: "Integrity", value: "Brand-safe execution", icon: <ShieldCheck className="h-4.5 w-4.5" /> },
+                    {
+                      label: "Account plans",
+                      value: "Built + maintained",
+                      icon: <Target className="h-4.5 w-4.5" />,
+                    },
+                    {
+                      label: "Meeting quality",
+                      value: "Qualified + documented",
+                      icon: <Handshake className="h-4.5 w-4.5" />,
+                    },
+                    {
+                      label: "Visibility",
+                      value: "Pipeline + next steps",
+                      icon: <BarChart3 className="h-4.5 w-4.5" />,
+                    },
+                    {
+                      label: "Integrity",
+                      value: "Brand-safe execution",
+                      icon: <ShieldCheck className="h-4.5 w-4.5" />,
+                    },
                   ].map((row, idx) => (
                     <div
                       key={idx}
@@ -610,7 +749,9 @@ export default function Landing() {
                         </div>
                         <div className="text-sm font-semibold">{row.label}</div>
                       </div>
-                      <div className="text-xs sm:text-sm text-muted-foreground">{row.value}</div>
+                      <div className="text-xs sm:text-sm text-muted-foreground">
+                        {row.value}
+                      </div>
                     </div>
                   ))}
                 </div>
@@ -673,7 +814,9 @@ export default function Landing() {
                   </div>
                 </div>
                 <div className="mt-3 text-base font-semibold">{p.title}</div>
-                <div className="mt-2 text-sm text-muted-foreground leading-relaxed">{p.desc}</div>
+                <div className="mt-2 text-sm text-muted-foreground leading-relaxed">
+                  {p.desc}
+                </div>
               </div>
             </div>
           ))}
@@ -691,7 +834,8 @@ export default function Landing() {
               Want a transparent pipeline without the overhead?
             </div>
             <div className="mt-2 text-sm text-muted-foreground leading-relaxed">
-              Share your territory and product. We’ll respond with next steps and a suggested 30-day plan.
+              Share your territory and product. We’ll respond with next steps
+              and a suggested 30-day plan.
             </div>
           </div>
           <div className="flex items-center gap-3">
@@ -771,15 +915,22 @@ export default function Landing() {
       </Section>
 
       {/* FOOTER */}
-      <footer className="border-t border-border/60 bg-background" data-testid="site-footer">
+      <footer
+        className="border-t border-border/60 bg-background"
+        data-testid="site-footer"
+      >
         <div className="container-pad py-10">
           <div className="grid gap-8 md:grid-cols-3">
             <div>
               <div className="font-display text-lg" data-testid="footer-brand">
                 Om Convassing Agency
               </div>
-              <p className="mt-2 text-sm text-muted-foreground leading-relaxed" data-testid="footer-blurb">
-                Premium representation for manufacturers and B2B providers — led by Ravi Gupta and B.L. Gupta in Satna.
+              <p
+                className="mt-2 text-sm text-muted-foreground leading-relaxed"
+                data-testid="footer-blurb"
+              >
+                Premium representation for manufacturers and B2B providers — led
+                by Ravi Gupta and B.L. Gupta in Satna.
               </p>
             </div>
 
@@ -789,16 +940,6 @@ export default function Landing() {
               </div>
               <div className="text-muted-foreground">8269666320 (Ravi Gupta)</div>
               <div className="text-muted-foreground">9303320625 (B.L. Gupta)</div>
-
-              <div className="text-xs font-semibold tracking-[0.18em] uppercase text-muted-foreground"> 
-                Telephone
-                 </div>
-                <div className="text-muted-foreground">07672-411502</div>
-              <div className="text-muted-foreground">07672-406963</div>
-             
-              <div className="text-xs font-semibold tracking-[0.18em] uppercase text-muted-foreground"> 
-                Address
-                 </div>
               <div className="text-muted-foreground">T.T Nagar, Infront of Shivpuram Colony, Satna Madhya Pradesh (485001)</div>
             </div>
 
@@ -806,7 +947,10 @@ export default function Landing() {
               <div className="text-xs font-semibold tracking-[0.18em] uppercase text-muted-foreground">
                 Proprietor
               </div>
-              <div className="mt-2 inline-flex items-center gap-2 text-sm text-muted-foreground" data-testid="footer-note">
+              <div
+                className="mt-2 inline-flex items-center gap-2 text-sm text-muted-foreground"
+                data-testid="footer-note"
+              >
                 <ShieldCheck className="h-4 w-4 text-primary" />
                 Ravi Gupta
               </div>
@@ -835,7 +979,10 @@ export default function Landing() {
             "
             data-testid="footer-bottom"
           >
-            <div>© {new Date().getFullYear()} Om Convassing Agency. All rights reserved.</div>
+            <div>
+              © {new Date().getFullYear()} Om Convassing Agency. All rights
+              reserved.
+            </div>
             <div className="flex items-center gap-2">
               <span className="opacity-70">Designed for clarity.</span>
               <span aria-hidden="true">•</span>
