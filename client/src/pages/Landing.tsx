@@ -7,6 +7,8 @@ import { Faq } from "@/components/Faq";
 import { ContactForm } from "@/components/ContactForm";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import CategoryCarousel, { CategoryItem } from "../components/CategoryCarousel";
+
 import {
   ArrowRight,
   BadgeCheck,
@@ -64,69 +66,6 @@ const SERVICES = [
     description:
       "Your company is represented with consistency, professionalism, and clear messaging across every touchpoint.",
     id: "svc-6",
-  },
-];
-
-const INDUSTRIES = [
-  {
-    title: "Cereals",
-    note: "Primary grains and pulses",
-    image: "/industries/category_1.jpg",
-    items: [
-      "Green Millets",
-      "Chana Dal",
-      "Chickpeas",
-      "Wheat Flour",
-      "Desi Chana",
-      "Yellow Corn Maize",
-      "Wheat",
-      "Sorghum Seeds",
-      "1121 Basmati Rice",
-      "Sona Masoori Rice",
-      "RI-36 Rice",
-    ],
-    id: "ind-1",
-  },
-  {
-    title: "Oil Seeds",
-    note: "High-yield oil crops",
-    image: "/industries/category_2.jpg",
-    items: [
-      "Black Mustard",
-      "Yellow Soyabean",
-      "Yellow Mustard",
-      "Sunflower Seeds",
-    ],
-    id: "ind-2",
-  },
-  {
-    title: "Oil Seed Cakes",
-    note: "Premium extraction meals",
-    image: "/industries/category_3.jpg",
-    items: [
-      "Groundnut Oil Cake",
-      "Sunflower Oil Cake",
-      "Cottonseed Meal",
-      "Linseed Meal",
-      "Mustard Cake",
-      "Sesame Seed Meal",
-    ],
-    id: "ind-3",
-  },
-  {
-    title: "Bran",
-    note: "Nutritional milling byproducts",
-    image: "/industries/category_4.jpg",
-    items: [
-      "Rice Bran",
-      "Wheat Bran",
-      "Arhar Bran",
-      "Chickpea",
-      "Lentil Bran",
-      "Pea Bran",
-      "Pea Husk",
-    ],
-    id: "ind-4",
   },
 ];
 
@@ -240,6 +179,134 @@ const FAQ_ITEMS = [
     q: "Do you require exclusivity?",
     a: "It depends on the product, territory, and channel. We’ll recommend an arrangement that protects both parties and keeps incentives aligned.",
   },
+];
+
+const cereals: CategoryItem[] = [
+  {
+    id: "c1",
+    label: "Primary grains and pulses",
+    imgSrc: "/industries/cereals_primary_grains.jpg",
+  },
+  {
+    id: "c2",
+    label: "Green Millets",
+    imgSrc: "/industries/cereals_green_millets.jpg",
+  },
+  { id: "c3", label: "Chana Dal", imgSrc: "/industries/cereals_chana_dal.jpg" },
+  { id: "c4", label: "Chickpeas", imgSrc: "/industries/cereals_chickpeas.jpg" },
+  {
+    id: "c5",
+    label: "Wheat Flour",
+    imgSrc: "/industries/cereals_wheat_flour.jpg",
+  },
+  {
+    id: "c6",
+    label: "Desi Chana",
+    imgSrc: "/industries/cereals_desi_chana.jpg",
+  },
+  {
+    id: "c7",
+    label: "Yellow Corn Maize",
+    imgSrc: "/industries/cereals_yellow_corn.jpg",
+  },
+  { id: "c8", label: "Wheat", imgSrc: "/industries/cereals_wheat.jpg" },
+  {
+    id: "c9",
+    label: "Sorghum Seeds",
+    imgSrc: "/industries/cereals_sorghum.jpg",
+  },
+  {
+    id: "c10",
+    label: "1121 Basmati Rice",
+    imgSrc: "/industries/cereals_1121_basmati.jpg",
+  },
+  {
+    id: "c11",
+    label: "Sona Masoori Rice",
+    imgSrc: "/industries/cereals_sona_masoori.jpg",
+  },
+  { id: "c12", label: "RI-36 Rice", imgSrc: "/industries/cereals_ri36.jpg" },
+];
+
+const oilSeeds: CategoryItem[] = [
+  {
+    id: "o1",
+    label: "High-yield oil crops",
+    imgSrc: "/industries/oil_high_yield.jpg",
+  },
+  {
+    id: "o2",
+    label: "Black Mustard",
+    imgSrc: "/industries/oil_black_mustard.jpg",
+  },
+  {
+    id: "o3",
+    label: "Yellow Soyabean",
+    imgSrc: "/industries/oil_yellow_soyabean.jpg",
+  },
+  {
+    id: "o4",
+    label: "Yellow Mustard",
+    imgSrc: "/industries/oil_yellow_mustard.jpg",
+  },
+  {
+    id: "o5",
+    label: "Sunflower Seeds",
+    imgSrc: "/industries/oil_sunflower.jpg",
+  },
+];
+
+const oilSeedCakes: CategoryItem[] = [
+  {
+    id: "oc1",
+    label: "Premium extraction meals",
+    imgSrc: "/industries/oilcakes_premium_extraction.jpg",
+  },
+  {
+    id: "oc2",
+    label: "Groundnut Oil Cake",
+    imgSrc: "/industries/oilcakes_groundnut.jpg",
+  },
+  {
+    id: "oc3",
+    label: "Sunflower Oil Cake",
+    imgSrc: "/industries/oilcakes_sunflower.jpg",
+  },
+  {
+    id: "oc4",
+    label: "Cottonseed Meal",
+    imgSrc: "/industries/oilcakes_cottonseed.jpg",
+  },
+  {
+    id: "oc5",
+    label: "Linseed Meal",
+    imgSrc: "/industries/oilcakes_linseed.jpg",
+  },
+  {
+    id: "oc6",
+    label: "Mustard Cake",
+    imgSrc: "/industries/oilcakes_mustard.jpg",
+  },
+  {
+    id: "oc7",
+    label: "Sesame Seed Meal",
+    imgSrc: "/industries/oilcakes_sesame.jpg",
+  },
+];
+
+const bran: CategoryItem[] = [
+  {
+    id: "b0",
+    label: "Nutritional milling byproducts",
+    imgSrc: "/industries/bran_nutritional_byproducts.jpg",
+  },
+  { id: "b1", label: "Rice Bran", imgSrc: "/industries/bran_rice_bran.jpg" },
+  { id: "b2", label: "Wheat Bran", imgSrc: "/industries/bran_wheat_bran.jpg" },
+  { id: "b3", label: "Arhar Bran", imgSrc: "/industries/bran_arhar.jpg" },
+  { id: "b4", label: "Chickpea", imgSrc: "/industries/bran_chickpea.jpg" },
+  { id: "b5", label: "Lentil Bran", imgSrc: "/industries/bran_lentil.jpg" },
+  { id: "b6", label: "Pea Bran", imgSrc: "/industries/bran_pea_bran.jpg" },
+  { id: "b7", label: "Pea Husk", imgSrc: "/industries/bran_pea_husk.jpg" },
 ];
 
 export default function Landing() {
@@ -546,50 +613,21 @@ export default function Landing() {
             </div>
           </div>
         </div>
-
-        {/* INDUSTRIES GRID MOVED HERE */}
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {INDUSTRIES.map((i) => (
-            <div
-              key={i.id}
-              className="
-                group overflow-hidden rounded-3xl border border-border/60 bg-card/70
-                shadow-sm hover:shadow-lift transition-all duration-500
-              "
-              data-testid={`industry-${i.id}`}
-            >
-              <div className="aspect-[4/3] overflow-hidden relative">
-                <img
-                  src={i.image}
-                  alt={i.title}
-                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60" />
-                <div className="absolute bottom-4 left-4 text-white">
-                  <div className="text-xl font-bold tracking-tight">
-                    {i.title}
-                  </div>
-                </div>
-              </div>
-              <div className="p-5">
-                <div className="text-xs font-semibold text-primary uppercase tracking-wider mb-2">
-                  {i.note}
-                </div>
-                <ul className="space-y-1">
-                  {i.items?.map((item, idx) => (
-                    <li
-                      key={idx}
-                      className="flex items-center gap-2 text-sm text-muted-foreground"
-                    >
-                      <div className="h-1 w-1 rounded-full bg-primary/40" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          ))}
-        </div>
+        <CategoryCarousel title="Cereals" items={cereals} />
+        {/* spacing so user scrolls down to next category */}
+        <div className="h-6" />
+        {/* Oil Seeds next */}
+        <CategoryCarousel title="Oil Seeds" items={oilSeeds} />
+        {/* Oil Seed Cakes */}
+        <div className="h-6" /> {/* keep spacing so user scrolls down */}
+        <CategoryCarousel
+          title="Oil Seed Cakes"
+          items={oilSeedCakes}
+          themeColor="#0f371f"
+        />
+        {/* Bran */}
+        <div className="h-6" />
+        <CategoryCarousel title="Bran" items={bran} themeColor="#0f371f" />
       </Section>
 
       {/* SERVICES */}
