@@ -8,10 +8,11 @@ export type CategoryItem = {
 
 export default function CategoryCarousel({
   title,
+  detail,
   items,
-  themeColor = "#0f371f",
 }: {
   title: string;
+  detail : string;
   items: CategoryItem[];
   themeColor?: string;
 }) {
@@ -21,16 +22,17 @@ export default function CategoryCarousel({
     const el = scrollerRef.current;
     if (!el) return;
     const amount = el.clientWidth * 0.8; // scroll almost full view
-    el.scrollBy({ left: dir === "right" ? amount : -amount, behavior: "smooth" });
+    el.scrollBy({
+      left: dir === "right" ? amount : -amount,
+      behavior: "smooth",
+    });
   };
 
   return (
     <section className="my-8">
       <div className="flex items-center justify-between mb-4">
-        <h3
-          className="text-2xl font-semibold text-primary/90"
-        >
-          {title}
+        <h3 className="text-3xl font-semibold text-primary/90">
+          {title} : <span className="text-2xl font-thin text-white">{detail}</span>
         </h3>
         <div className="flex gap-2">
           <button

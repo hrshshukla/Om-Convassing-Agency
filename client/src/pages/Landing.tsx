@@ -182,11 +182,7 @@ const FAQ_ITEMS = [
 ];
 
 const cereals: CategoryItem[] = [
-  {
-    id: "c1",
-    label: "Primary grains and pulses",
-    imgSrc: "/industries/cereals_primary_grains.jpg",
-  },
+
   {
     id: "c2",
     label: "Green Millets",
@@ -229,11 +225,7 @@ const cereals: CategoryItem[] = [
 ];
 
 const oilSeeds: CategoryItem[] = [
-  {
-    id: "o1",
-    label: "High-yield oil crops",
-    imgSrc: "/industries/oil_high_yield.jpg",
-  },
+
   {
     id: "o2",
     label: "Black Mustard",
@@ -257,11 +249,7 @@ const oilSeeds: CategoryItem[] = [
 ];
 
 const oilSeedCakes: CategoryItem[] = [
-  {
-    id: "oc1",
-    label: "Premium extraction meals",
-    imgSrc: "/industries/oilcakes_premium_extraction.jpg",
-  },
+
   {
     id: "oc2",
     label: "Groundnut Oil Cake",
@@ -373,7 +361,7 @@ export default function Landing() {
                     data-testid="hero-cta-primary"
                   >
                     <a href="#contact">
-                      Contact Us -
+                      Contact Us
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </a>
                   </Button>
@@ -613,21 +601,20 @@ export default function Landing() {
             </div>
           </div>
         </div>
-        <CategoryCarousel title="Cereals" items={cereals} />
-        {/* spacing so user scrolls down to next category */}
+        <CategoryCarousel title="Cereals" detail="Primary grains and pulses" items={cereals} />
+
         <div className="h-6" />
-        {/* Oil Seeds next */}
-        <CategoryCarousel title="Oil Seeds" items={oilSeeds} />
-        {/* Oil Seed Cakes */}
-        <div className="h-6" /> {/* keep spacing so user scrolls down */}
+        <CategoryCarousel title="Oil Seeds" detail="High-yield oil crops" items={oilSeeds} />
+      
+        <div className="h-6" /> 
         <CategoryCarousel
           title="Oil Seed Cakes"
+          detail="Premium extraction meals"
           items={oilSeedCakes}
-          themeColor="#0f371f"
         />
         {/* Bran */}
         <div className="h-6" />
-        <CategoryCarousel title="Bran" items={bran} themeColor="#0f371f" />
+        <CategoryCarousel title="Bran" detail="Nutritional milling byproducts" items={bran}/>
       </Section>
 
       {/* SERVICES */}
