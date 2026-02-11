@@ -338,9 +338,7 @@ export default function Landing() {
                   "
                   data-testid="hero-subtitle"
                 >
-                  Representing manufacturers and B2B providers with a sales system built on
-                  credibility, consistent execution, and transparent reporting — led by Ravi Gupta
-                  and B.L. Gupta in Satna, Madhya Pradesh.
+                  B2B Commission Agent & Broker with 40+ years of experience in agricultural commodity trading. We act as the trusted middleman between grain and cattle feed buyers and sellers across India — helping both parties find their best match, negotiate fair prices, and close deals smoothly. Known for consistent execution, transparent reporting, and unmatched trust, we are Satna, Madhya Pradesh's most reliable name in grain and cattle feed brokerage.
                 </p>
 
                 <div className="mt-8 flex flex-col sm:flex-row gap-3 sm:items-center">
