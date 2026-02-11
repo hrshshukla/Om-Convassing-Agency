@@ -396,18 +396,18 @@ export default function Landing() {
                 >
                   {[
                     {
-                      k: "30–90 days",
-                      v: "time to first qualified meetings",
+                      k: "Legacy",
+                      v: "40+ years of trust, built one deal at a time.",
                       id: "m1",
                     },
                     {
-                      k: "Monthly",
-                      v: "structured reporting cadence",
+                      k: "Transparency",
+                      v: "No hidden agenda. No hidden charges. Just honest business.",
                       id: "m2",
                     },
                     {
-                      k: "Outcome-led",
-                      v: "commission-aligned incentives",
+                      k: "Reliability",
+                      v: "When we commit, we deliver.",
                       id: "m3",
                     },
                   ].map((m) => (
@@ -445,11 +445,27 @@ export default function Landing() {
       {/* ABOUT */}
       <Section
         id="about"
-        eyebrow="About & Products"
-        title="B2B Trading & Commission Services."
-        description="We combine territory planning, relationship-led outreach, and a comprehensive catalogue of agricultural commodities — designed for manufacturers where quality and trust win deals."
+        eyebrow="About Us & PRODUCTS WE DEAL IN"
+        title="B2B Trading & Commission Agent."
+        description="Satna's most trusted grain & cattle feed broker — connecting buyers and sellers across India with 40 years of legacy, trust, transparency, and reliability."
         data-testid="section-about"
       >
+        <CategoryCarousel title="Cereals" detail="Primary grains and pulses" items={cereals} />
+
+        <div className="h-6" />
+        <CategoryCarousel title="Oil Seeds" detail="High-yield oil crops" items={oilSeeds} />
+      
+        <div className="h-6" /> 
+        <CategoryCarousel
+          title="Oil Seed Cakes"
+          detail="Premium extraction meals"
+          items={oilSeedCakes}
+        />
+        {/* Bran */}
+        <div className="h-6" />
+        <CategoryCarousel title="Bran" detail="Nutritional milling byproducts" items={bran}/>
+      </Section>
+
         <div className="grid gap-6 lg:grid-cols-3 mb-16">
           <div className="lg:col-span-2">
             <div
@@ -463,30 +479,30 @@ export default function Landing() {
                 {[
                   {
                     icon: <MapPin className="h-5 w-5" />,
-                    title: "Territory coverage",
+                    title: "Our Market Reach",
                     description:
-                      "Local presence for meetings, job sites, and channel partners — with disciplined follow-up.",
+                      "We regularly visit mandis, warehouses, and factories to stay connected with buyers and sellers.We don’t just make deals — we follow up properly until delivery is complete.",
                     id: "about-1",
                   },
                   {
                     icon: <ShieldCheck className="h-5 w-5" />,
-                    title: "Brand integrity",
+                    title: "Fair & Honest Dealing",
                     description:
-                      "Your positioning and pricing are protected through consistent messaging and process.",
+                      "We believe in clear rates and honest communication.No hidden charges. No confusion. Just transparent and trustworthy transactions.",
                     id: "about-2",
                   },
                   {
                     icon: <Handshake className="h-5 w-5" />,
                     title: "Long-term relationships",
                     description:
-                      "We focus on accounts that fit — because repeat revenue is earned, not chased.",
+                      "Many of our clients have been working with us for years.We focus on building strong, long-lasting business relations — not one-time deals.",
                     id: "about-3",
                   },
                   {
                     icon: <BarChart3 className="h-5 w-5" />,
-                    title: "Transparent reporting",
+                    title: "Clear Updates & Support",
                     description:
-                      "Know what’s happening, what’s next, and where deals are at risk — without micromanaging.",
+                      "We keep you informed about market rates, deal status, dispatch details, and payments.You’ll always know what’s happening — without running after anyone.",
                     id: "about-4",
                   },
                 ].map((f) => (
@@ -595,22 +611,7 @@ export default function Landing() {
             </div>
           </div>
         </div>
-        <CategoryCarousel title="Cereals" detail="Primary grains and pulses" items={cereals} />
-
-        <div className="h-6" />
-        <CategoryCarousel title="Oil Seeds" detail="High-yield oil crops" items={oilSeeds} />
-      
-        <div className="h-6" /> 
-        <CategoryCarousel
-          title="Oil Seed Cakes"
-          detail="Premium extraction meals"
-          items={oilSeedCakes}
-        />
-        {/* Bran */}
-        <div className="h-6" />
-        <CategoryCarousel title="Bran" detail="Nutritional milling byproducts" items={bran}/>
-      </Section>
-
+        
       {/* SERVICES */}
       <Section
         id="services"
