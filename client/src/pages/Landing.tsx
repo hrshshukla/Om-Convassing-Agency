@@ -976,7 +976,7 @@ export default function Landing() {
             data-testid="footer-bottom"
           >
             <div>
-              © {new Date().getFullYear()} Om Convassing Agency. All rights
+              © {new Date().getFullYear()} Om Canvassing Agency. All rights
               reserved.
             </div>
             <div className="flex items-center gap-2">
