@@ -186,9 +186,9 @@ const cereals: CategoryItem[] = [
   {
     id: "c2",
     label: "Green Millets",
-    imgSrc: "/industries/cereals_green_millets.jpg",
+    imgSrc: "/industries/greenmillet.jpg",
   },
-  { id: "c3", label: "Chana Dal", imgSrc: "/industries/cereals_chana_dal.jpg" },
+  { id: "c3", label: "Chana Dal", imgSrc: "/industries/chana_dal.jpg" },
   { id: "c4", label: "Chickpeas", imgSrc: "/industries/cereals_chickpeas.jpg" },
   {
     id: "c5",
@@ -198,7 +198,7 @@ const cereals: CategoryItem[] = [
   {
     id: "c6",
     label: "Desi Chana",
-    imgSrc: "/industries/cereals_desi_chana.jpg",
+    imgSrc: "/industries/black_chana.webp",
   },
   {
     id: "c7",
@@ -219,7 +219,7 @@ const cereals: CategoryItem[] = [
   {
     id: "c11",
     label: "Sona Masoori Rice",
-    imgSrc: "/industries/cereals_sona_masoori.jpg",
+    imgSrc: "/industries/Mansoori_Rice.webp",
   },
   { id: "c12", label: "RI-36 Rice", imgSrc: "/industries/cereals_ri36.jpg" },
 ];
@@ -229,22 +229,22 @@ const oilSeeds: CategoryItem[] = [
   {
     id: "o2",
     label: "Black Mustard",
-    imgSrc: "/industries/oil_black_mustard.jpg",
+    imgSrc: "/industries/black_mustard.webp",
   },
   {
     id: "o3",
     label: "Yellow Soyabean",
-    imgSrc: "/industries/oil_yellow_soyabean.jpg",
+    imgSrc: "/industries/yellow_soyabean.webp",
   },
   {
     id: "o4",
     label: "Yellow Mustard",
-    imgSrc: "/industries/oil_yellow_mustard.jpg",
+    imgSrc: "/industries/Yellow_Mustard_Seeds.webp",
   },
   {
     id: "o5",
     label: "Sunflower Seeds",
-    imgSrc: "/industries/oil_sunflower.jpg",
+    imgSrc: "/industries/sunflower.webp",
   },
 ];
 
@@ -253,27 +253,27 @@ const oilSeedCakes: CategoryItem[] = [
   {
     id: "oc2",
     label: "Groundnut Oil Cake",
-    imgSrc: "/industries/oilcakes_groundnut.jpg",
+    imgSrc: "/industries/groundnut_cake.webp",
   },
   {
     id: "oc3",
     label: "Sunflower Oil Cake",
-    imgSrc: "/industries/oilcakes_sunflower.jpg",
+    imgSrc: "/industries/sunflower_oil_cake.webp",
   },
   {
     id: "oc4",
     label: "Cottonseed Meal",
-    imgSrc: "/industries/oilcakes_cottonseed.jpg",
+    imgSrc: "/industries/cotton_Seed_meal.webp",
   },
   {
     id: "oc5",
     label: "Linseed Meal",
-    imgSrc: "/industries/oilcakes_linseed.jpg",
+    imgSrc: "/industries/linseed_meal.webp",
   },
   {
     id: "oc6",
     label: "Mustard Cake",
-    imgSrc: "/industries/oilcakes_mustard.jpg",
+    imgSrc: "/industries/black_mustard_cake.webp",
   },
   {
     id: "oc7",
@@ -283,18 +283,15 @@ const oilSeedCakes: CategoryItem[] = [
 ];
 
 const bran: CategoryItem[] = [
-  {
-    id: "b0",
-    label: "Nutritional milling byproducts",
-    imgSrc: "/industries/bran_nutritional_byproducts.jpg",
-  },
-  { id: "b1", label: "Rice Bran", imgSrc: "/industries/bran_rice_bran.jpg" },
-  { id: "b2", label: "Wheat Bran", imgSrc: "/industries/bran_wheat_bran.jpg" },
-  { id: "b3", label: "Arhar Bran", imgSrc: "/industries/bran_arhar.jpg" },
-  { id: "b4", label: "Chickpea", imgSrc: "/industries/bran_chickpea.jpg" },
-  { id: "b5", label: "Lentil Bran", imgSrc: "/industries/bran_lentil.jpg" },
-  { id: "b6", label: "Pea Bran", imgSrc: "/industries/bran_pea_bran.jpg" },
-  { id: "b7", label: "Pea Husk", imgSrc: "/industries/bran_pea_husk.jpg" },
+  // {
+  //   id: "b0",
+  //   label: "Nutritional milling byproducts",
+  //   imgSrc: "/industries/bran_nutritional_byproducts.jpg",
+  // },
+  { id: "b1", label: "Rice Bran", imgSrc: "/industries/rice_bran.webp" },
+  { id: "b2", label: "Wheat Bran", imgSrc: "/industries/wheat_bran.webp" },
+  { id: "b3", label: "Arhar Bran", imgSrc: "/industries/arhar_bran.webp" },
+  { id: "b7", label: "Pea Husk", imgSrc: "/industries/pea_bran.webp" },
 ];
 
 export default function Landing() {
