@@ -80,10 +80,10 @@ export function AnchorNav() {
 
             <div className="leading-tight">
               <div className="font-display text-base sm:text-lg" data-testid="company-name">
-                Meridian Commission Agents
+                Grain & Agriculture Products Commission Agents
               </div>
               <div className="text-xs text-muted-foreground" data-testid="company-tagline">
-                Trusted representation. Measurable growth.
+                {/* Trusted representation. Measurable growth. */}
               </div>
             </div>
           </div>
