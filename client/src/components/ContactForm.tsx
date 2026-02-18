@@ -89,8 +89,8 @@ export function ContactForm({
 
       if (res.ok) {
         toast({
-          title: "Inquiry received",
-          description: "Thanks for reaching out! We'll get back to you soon.",
+          title: "Thank you!",
+          description: "We will contact you soon.",
         });
 
         setForm({ name: "", email: "", company: "", phone: "", message: "" });
@@ -158,18 +158,16 @@ export function ContactForm({
             </div>
 
             <h3
-              className="mt-4 text-2xl sm:text-3xl leading-tight"
+              className="mt-4 text-2xl sm:text-3xl font-bold text-foreground leading-tight"
               data-testid="contact-title"
             >
-              Tell us what you're selling — we'll tell you how we'll grow it.
+              Send us your requirement — we’ll contact you within 24 hours.
             </h3>
             <p
               className="mt-3 text-sm sm:text-base text-muted-foreground leading-relaxed"
               data-testid="contact-subtitle"
             >
-              We represent manufacturers and service providers with a
-              disciplined pipeline: targeted outreach, relationship-led selling,
-              and transparent reporting.
+              Whether you are a buyer or a seller, we are here to help you close the best deals with complete transparency.
             </p>
 
             <div className="mt-6 grid gap-3 text-sm">
@@ -220,7 +218,7 @@ export function ContactForm({
                       value={form.name}
                       onChange={(e) => setField("name", e.target.value)}
                       placeholder="Jane Doe"
-                      className="pl-9 h-11 rounded-xl bg-background/60 border-border/70 ring-focus"
+                      className="pl-9 h-12 rounded-xl bg-background/60 border-border/70 focus:border-primary focus:ring-primary/20 transition-all"
                       data-testid="contact-name"
                       aria-invalid={!!fieldError.name}
                     />
@@ -249,7 +247,7 @@ export function ContactForm({
                       value={form.email}
                       onChange={(e) => setField("email", e.target.value)}
                       placeholder="jane@company.com"
-                      className="pl-9 h-11 rounded-xl bg-background/60 border-border/70 ring-focus"
+                      className="pl-9 h-12 rounded-xl bg-background/60 border-border/70 focus:border-primary focus:ring-primary/20 transition-all"
                       data-testid="contact-email"
                       aria-invalid={!!fieldError.email}
                     />
@@ -279,7 +277,7 @@ export function ContactForm({
                       value={form.company}
                       onChange={(e) => setField("company", e.target.value)}
                       placeholder="Company Inc."
-                      className="pl-9 h-11 rounded-xl bg-background/60 border-border/70 ring-focus"
+                      className="pl-9 h-12 rounded-xl bg-background/60 border-border/70 focus:border-primary focus:ring-primary/20 transition-all"
                       data-testid="contact-company"
                       aria-invalid={!!fieldError.company}
                     />
@@ -309,7 +307,7 @@ export function ContactForm({
                       value={form.phone}
                       onChange={(e) => setField("phone", e.target.value)}
                       placeholder="+1 (555) 123-4567"
-                      className="pl-9 h-11 rounded-xl bg-background/60 border-border/70 ring-focus"
+                      className="pl-9 h-12 rounded-xl bg-background/60 border-border/70 focus:border-primary focus:ring-primary/20 transition-all"
                       data-testid="contact-phone"
                       aria-invalid={!!fieldError.phone}
                     />
@@ -338,7 +336,7 @@ export function ContactForm({
                     value={form.message}
                     onChange={(e) => setField("message", e.target.value)}
                     placeholder="Share a quick overview: products, territory, current pipeline, goals…"
-                    className="min-h-[132px] rounded-xl bg-background/60 border-border/70 ring-focus"
+                    className="min-h-[132px] rounded-xl bg-background/60 border-border/70 focus:border-primary focus:ring-primary/20 transition-all"
                     data-testid="contact-message"
                     aria-invalid={!!fieldError.message}
                   />
@@ -382,11 +380,10 @@ export function ContactForm({
                   disabled={!canSubmit}
                   data-testid="contact-submit"
                   className="
-                    rounded-xl px-5 h-11
+                    rounded-full px-8 h-12 text-base font-medium
                     bg-gradient-to-r from-primary to-primary/85
                     text-primary-foreground shadow-soft
-                    hover:shadow-lift hover:-translate-y-0.5
-                    active:translate-y-0
+                    hover:shadow-lift hover:-translate-y-0.5 active:translate-y-0
                     disabled:opacity-60 disabled:cursor-not-allowed disabled:transform-none
                     transition-all duration-300 ease-out
                   "

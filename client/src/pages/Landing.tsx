@@ -306,146 +306,84 @@ export default function Landing() {
       <AnchorNav />
 
       {/* HERO */}
-      <header className="relative overflow-hidden hero-mesh">
-        <div className="relative grain">
-          <div className="container-pad">
-            <div className="py-16 sm:py-20 lg:py-24">
-              <div className="max-w-3xl animate-in-up">
-                <Badge
+      <header className="relative overflow-hidden bg-background">
+        <div className="relative pt-20 pb-16 sm:pt-32 sm:pb-24 hero-mesh opacity-90">
+          <div className="container-pad relative grain">
+            <div className="max-w-4xl mx-auto text-center animate-in-up">
+              <Badge
+                className="
+                  rounded-full border border-border/60 bg-card/60 text-foreground
+                  backdrop-blur mb-6
+                "
+              >
+                41-Year's of Legacy.
+              </Badge>
+
+              <h1
+                className="
+                  text-5xl sm:text-7xl lg:text-8xl font-bold
+                  tracking-tight text-foreground leading-[1.02] text-balance
+                "
+                data-testid="hero-title"
+              >
+                OM CANVASSING AGENCY
+              </h1>
+
+              <p
+                className="
+                  mt-8 text-lg sm:text-xl text-muted-foreground 
+                  max-w-2xl mx-auto leading-relaxed
+                "
+                data-testid="hero-subtitle"
+              >
+                Satna's trusted grain & cattle feed brokerage — connecting buyers and sellers across India with 40+ years of legacy, trust, transparency, and reliability.
+              </p>
+
+              <div className="mt-10 flex justify-center">
+                <Button
+                  asChild
+                  size="lg"
                   className="
-                    rounded-full border border-border/60 bg-card/60 text-foreground
-                    backdrop-blur
+                    h-14 rounded-xl px-10 text-lg font-medium
+                    bg-gradient-to-r from-primary to-primary/85
+                    text-primary-foreground shadow-soft
+                    hover:shadow-lift hover:-translate-y-1
+                    transition-all duration-300
                   "
-                  data-testid="hero-badge"
                 >
-                  41-Year's of Legacy.
-                </Badge>
-
-                <h1
-                  className="
-                    mt-6 text-4xl sm:text-5xl lg:text-6xl
-                    leading-[1.02] text-balance
-                  "
-                  data-testid="hero-title"
-                >
-                  Om Canvassing Agency
-                </h1>
-
-                <p
-                  className="
-                    mt-5 text-base sm:text-lg lg:text-xl
-                    text-muted-foreground leading-relaxed
-                  "
-                  data-testid="hero-subtitle"
-                >
-                  B2B Commission Agent & Broker with 40+ years of experience in agricultural commodity trading. We act as the trusted middleman between grain and cattle feed buyers and sellers across India — helping both parties find their best match, negotiate fair prices, and close deals smoothly. Known for consistent execution, transparent reporting, and unmatched trust, we are Satna, Madhya Pradesh's most reliable name in grain and cattle feed brokerage.
-                </p>
-
-                <div className="mt-8 flex flex-col sm:flex-row gap-3 sm:items-center">
-                  <Button
-                    asChild
-                    className="
-                      h-12 rounded-xl px-6
-                      bg-gradient-to-r from-primary to-primary/85
-                      text-primary-foreground shadow-soft
-                      hover:shadow-lift hover:-translate-y-0.5
-                      active:translate-y-0
-                      transition-all duration-300 ease-out
-                    "
-                    data-testid="hero-cta-primary"
-                  >
-                    <a href="#contact">
-                      Contact Now
-                      <ArrowRight className="ml-2 h-4 w-4" />
-                    </a>
-                  </Button>
-
-                  <Button
-                    asChild
-                    variant="outline"
-                    className="
-                      h-12 rounded-xl px-6
-                      bg-card/60 border-border/70 backdrop-blur
-                      hover:bg-card hover:border-border
-                      transition-all duration-300
-                    "
-                    data-testid="hero-cta-secondary"
-                  >
-                    <a href="#services">Explore services</a>
-                  </Button>
-
-                  <div
-                    className="sm:ml-auto flex items-center gap-3 text-xs sm:text-sm text-muted-foreground"
-                    data-testid="hero-proof"
-                  >
-                    <div className="flex items-center gap-2">
-                      <span className="h-2 w-2 rounded-full bg-primary shadow-[0_0_0_4px_hsl(var(--primary)/0.15)]" />
-                      Relationship-first
-                    </div>
-                    <div className="hidden sm:block h-4 w-px bg-border/70" />
-                    <div className="flex items-center gap-2">
-                      <span className="h-2 w-2 rounded-full bg-accent shadow-[0_0_0_4px_hsl(var(--accent)/0.14)]" />
-                      Pipeline clarity
-                    </div>
-                  </div>
-                </div>
-
-                <div
-                  className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-3"
-                  data-testid="hero-metrics"
-                >
-                  {[
-                    {
-                      k: "Legacy",
-                      v: "40+ years of trust, built one deal at a time.",
-                      id: "m1",
-                    },
-                    {
-                      k: "Transparency",
-                      v: "No hidden agenda. No hidden charges. Just honest business.",
-                      id: "m2",
-                    },
-                    {
-                      k: "Reliability",
-                      v: "When we commit, we deliver.",
-                      id: "m3",
-                    },
-                  ].map((m) => (
-                    <div
-                      key={m.id}
-                      className="
-                        rounded-2xl border border-border/60 bg-card/55 backdrop-blur
-                        p-4 sm:p-5 shadow-sm
-                      "
-                      data-testid={`hero-metric-${m.id}`}
-                    >
-                      <div className="text-lg sm:text-xl font-semibold tracking-tight">
-                        {m.k}
-                      </div>
-                      <div className="mt-1 text-xs sm:text-sm text-muted-foreground">
-                        {m.v}
-                      </div>
-                    </div>
-                  ))}
-                </div>
+                  <a href="#contact">Contact Us</a>
+                </Button>
               </div>
             </div>
           </div>
+        </div>
 
-          <div
-            className="
-              absolute inset-x-0 bottom-0 h-px
-              bg-gradient-to-r from-transparent via-border/80 to-transparent
-            "
-            aria-hidden="true"
-          />
+        {/* TRUST SIGNALS */}
+        <div className="border-y border-border/60 bg-card/30 backdrop-blur-md py-12">
+          <div className="container-pad">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+              {[
+                { label: "40+ Years Experience", icon: <BadgeCheck className="w-5 h-5 text-primary" /> },
+                { label: "Transparent Deals", icon: <ShieldCheck className="w-5 h-5 text-primary" /> },
+                { label: "Pan-India Network", icon: <Globe2 className="w-5 h-5 text-primary" /> },
+                { label: "Trusted by Traders Across India", icon: <Handshake className="w-5 h-5 text-primary" /> },
+              ].map((item, i) => (
+                <div key={i} className="flex flex-col items-center text-center gap-3 group">
+                  <div className="p-3 rounded-2xl bg-secondary/60 border border-border/60 group-hover:bg-secondary transition-colors">
+                    {item.icon}
+                  </div>
+                  <span className="text-sm font-semibold text-foreground">{item.label}</span>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </header>
 
       {/* ABOUT */}
       <Section
         id="about"
-        eyebrow="About Us & PRODUCTS WE DEAL IN"
+        eyebrow="Our Expertise"
         title="B2B Trading & Commission Agent."
         description="Satna's most trusted grain & cattle feed broker — connecting buyers and sellers across India with 40 years of legacy, trust, transparency, and reliability."
         data-testid="section-about"
@@ -464,6 +402,47 @@ export default function Landing() {
         {/* Bran */}
         <div className="h-6" />
         <CategoryCarousel title="Bran" detail="Nutritional milling byproducts" items={bran}/>
+      </Section>
+
+      {/* HOW WE WORK */}
+      <Section
+        id="how-we-work"
+        eyebrow="Process"
+        title="How We Work"
+        description="A simple, transparent 3-step process to get your deals done."
+        className="bg-secondary/25"
+      >
+        <div className="grid gap-8 md:grid-cols-3">
+          {[
+            {
+              step: "Step 1",
+              title: "Share your requirement",
+              desc: "Tell us what you need or what you're looking to sell.",
+              icon: <Layers3 className="w-6 h-6 text-primary" />
+            },
+            {
+              step: "Step 2",
+              title: "We connect buyers & sellers",
+              desc: "We leverage our vast network to find the perfect match for your deal.",
+              icon: <Handshake className="w-6 h-6 text-primary" />
+            },
+            {
+              step: "Step 3",
+              title: "Deal completed smoothly",
+              desc: "Transparent negotiation and seamless closure of the transaction.",
+              icon: <BadgeCheck className="w-6 h-6 text-primary" />
+            }
+          ].map((item, i) => (
+            <div key={i} className="bg-card/60 backdrop-blur-sm p-8 rounded-3xl border border-border/60 shadow-soft hover:shadow-lift transition-all">
+              <div className="w-12 h-12 rounded-2xl bg-secondary/60 border border-border/60 flex items-center justify-center mb-6">
+                {item.icon}
+              </div>
+              <div className="text-sm font-bold text-primary mb-2">{item.step}</div>
+              <h3 className="text-xl font-bold text-foreground mb-3">{item.title}</h3>
+              <p className="text-muted-foreground leading-relaxed">{item.desc}</p>
+            </div>
+          ))}
+        </div>
       </Section>
 
         <div className="grid gap-6 lg:grid-cols-3 mb-16">
